@@ -6,10 +6,11 @@ import Content from './Content';
 import BoxBtn from './BoxBtn';
 // import Bar from './Bar';
 import Get from './Get';
-import Post from './Post';
+// import Post from './Post';
 import Tablist from './Tab';
 import {ThemeProvider, Box,Button,Container,Typography} from "@material-ui/core";
 import theme from './Theme';
+import Post from './Post';
 import { useLocation } from 'react-router';
 import CssBaseline from '@mui/material/CssBaseline';
 

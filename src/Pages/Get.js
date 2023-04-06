@@ -3,83 +3,121 @@ import { styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import {Paper,Typography,Stack} from '@mui/material';
 import TagFacesIcon from '@mui/icons-material/TagFaces';
+import List from '@mui/material/ImageList';
+import ListItem from '@mui/material/ImageListItem';
 
-const ListItem = styled('li')(({ theme }) => ({
-  margin: theme.spacing(2),
-}));
 
+const itemData = [
+
+  {
+   
+    title: 'Food',
+  },
+  {
+    title: 'Education',
+  },
+  {
+    title: 'pop',
+  },
+  {
+    title: 'Design',
+  },
+  {
+    title: 'R&B',
+  },
+  {
+    title: 'Hip/hop& Rap',
+  },
+  {
+    title: 'Film',
+  },
+  {
+    title: 'Hats',
+  },
+  {
+    title: 'PersonalHealth',
+  },
+  {
+    title: 'Blues&Buzz',
+  },
+  {
+    title: 'Travel',
+  },
+  {
+    title: 'rock',
+  },
+  {
+   
+    title: 'Tomato basil',
+  },
+  {
+  
+    title: 'Sea star',
+  },
+  {
+  
+    title: 'Bike',
+  }, {
+  
+    title: 'Sea star',
+  },
+  
+
+];
 
  function Get() {
 
  
 
   return (
+    <>
+    
     <Paper
       sx={{
-        display: 'flex',
-        // justifyContent: 'center',
+        // display: 'flex',
         flexWrap: 'wrap',
-        listStyle: 'none',
         variant:"outlined",
-        p: 4,
-     marginTop:3,
+        p: 2,
+       
+        marginTop:3,
+        backgroundColor:"#eeedf2"
       }}
-      component="ul"
+      
     >
-          <Typography
+           <Typography
               variant="body2"
               sx={{
                 fontSize: "18px",
                 color: "black",
                 fontWeight: "500",
-                mt: 5,
-                mb: 4,
+                mt: 1,
+                mb: 2,
               }}
             >
-              Welcome to Besnik Agency
-            </Typography>
-      <Stack direction="row" spacing={2}>
-      <Chip variant="outlined" size="large" label="Comedy" />
-      <Chip variant="outlined" size="large" label="Food" />
-      <Chip variant="outlined" size="large" label="Education" />
-       <Chip variant="outlined" size="large" label="pop" />
-       <Chip variant="outlined" size="large" label="Design" />
-       <Chip variant="outlined" size="large" label="R&B" />
-       <Chip variant="outlined" size="large" label="Hip/Hop&Rap"/>
-       <Chip variant="outlined" size="large" label="Film"/>
-       <Chip variant="outlined" size="large" label="personal Health" />
-       <Chip variant="outlined" size="large" label="BluesjaZZ"/>
-       <Chip variant="outlined" size="large" label="Travel"/>
-       <Chip   variant="outlined" size="large" label="Rock" ></Chip>
-          <Chip variant="outlined" size="large" label="Yoga" />
+            Let's make it personal
+            </Typography> 
+            
+      <Stack direction="row">
+      <List sx={{ width: "100%" ,height:"90%",display:"flex",spacing:'8' }}  rowHeight={90}>
+      {itemData.map((item) => (
+        <ListItem key={item.img}  >
+            <Chip sx={{padding:'2px', fontSize:"", height:"44px",borderRadius:"24px",backgroundColor:"#fff"}} label={item.title}  variant="outlined"    /> 
+        </ListItem>
+      ))}
+    </List>
 
-      
-    </Stack>
-    <Stack direction="row" spacing={2} 
-    sx={{
-       
-        mt: 5,
-    
-      }}>
-          
-          <Chip variant="outlined" size="large" label="Country" />
-          <Chip variant="outlined" size="large" label="Startups & Small Business" />
-          <Chip variant="outlined" size="large" label="Classical" />
-          <Chip variant="outlined" size="large" label="Mental health" />
-          <Chip variant="outlined" size="large" label="TV" />
-          <Chip variant="outlined" size="large" label="Alternative" />
-          <Chip variant="outlined" size="large" label="Musical"/>
-
-   
-
-      
      
+     
+    
+
       
     </Stack>
+   
 
     
       
     </Paper>
+    </>
   );
 }
 export default Get;

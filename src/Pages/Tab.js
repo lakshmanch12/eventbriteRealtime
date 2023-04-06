@@ -16,6 +16,7 @@ import RollerSkatingOutlinedIcon from '@mui/icons-material/RollerSkatingOutlined
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 import DeleteIcon from '@mui/icons-material/Delete';
 import {  Link } from "react-router-dom";
+import { useState } from 'react';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -95,18 +96,18 @@ const Item = styled(Paper)(({ theme }) => ({
       
          <Grid item xs={2} sm={4} md={4} >
                 
-            <Link  to="/catgeory" sx={{ textDecoration: 'none'}} >
+            <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
             <Stack direction="row"textDecoration= 'none' spacing={0}>
             <Box sx={{
         width: 80,
         height: 70,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
-        textDecoration: 'none',
+     
         py: 2.2,
       }}
     >
-        < MusicNoteOutlinedIcon sx={{color:"black"}} />
+        < MusicNoteOutlinedIcon sx={{color:"red"}} />
         </Box>
         <Box
       sx={{
@@ -114,6 +115,7 @@ const Item = styled(Paper)(({ theme }) => ({
         height: 70,
         py: 2.2,
         backgroundColor: '#f8f7fa',
+        paddingLeft:'16px'
       
       }}
     >
@@ -121,7 +123,7 @@ const Item = styled(Paper)(({ theme }) => ({
        sx={{ alignItems:'center' , my:'4', color:'black',textDecoration: 'none'
     
 }}
-          variant="h6"    >
+variant="body2"   >
     Music
           </Typography>
 
@@ -134,7 +136,7 @@ const Item = styled(Paper)(({ theme }) => ({
           
           </Grid>
           <Grid item xs={2} sm={4} md={4} >
-          <Link  to="/catgeory" >
+          <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
             <Stack direction="row" spacing={0}>
             <Box
       sx={{
@@ -152,7 +154,7 @@ const Item = styled(Paper)(({ theme }) => ({
         },
       }}
     >
-        < GppGoodOutlinedIcon sx={{color:"black"}} />
+        < GppGoodOutlinedIcon sx={{color:"red"}} />
 
         </Box>
         <Box
@@ -160,6 +162,7 @@ const Item = styled(Paper)(({ theme }) => ({
         width: 210,
         height: 70,
         py: 2.2,
+        paddingLeft:"16px",
       
      
         // border:'1px solid black',
@@ -174,7 +177,7 @@ const Item = styled(Paper)(({ theme }) => ({
        sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',
     
 }}
-          variant="h6"    >
+          variant="body2"    >
   Performing&Arts
           </Typography>
 
@@ -190,7 +193,7 @@ const Item = styled(Paper)(({ theme }) => ({
             {/* <Item><GppGoodOutlinedIcon/>Performing&Visual Arts</Item> */}
           </Grid>
           <Grid item xs={2} sm={4} md={4} >
-          <Link  to="/catgeory" >
+          <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
       sx={{
@@ -208,7 +211,7 @@ const Item = styled(Paper)(({ theme }) => ({
         },
       }}
     >
-        < CollectionsOutlinedIcon sx={{color:"black"}} />
+        < CollectionsOutlinedIcon sx={{color:"red"}} />
 
         </Box>
         <Box
@@ -216,22 +219,16 @@ const Item = styled(Paper)(({ theme }) => ({
         width: 210,
         height: 70,
         py: 2.2,
-        textDecoration:'None',
-      
-     
-        // border:'1px solid black',
+       paddingLeft:'16px',
         backgroundColor: '#f8f7fa',
-        // '&:hover': {
-        // //   backgroundColor: 'primary.main',
-        //   opacity: [0.9, 0.8, 0.7],
-        // },
+      
       }}
     >
        <Typography component="body2"
        sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',
     
 }}
-          variant="h6"    >
+          variant="body2"    >
   Holiday
           </Typography>
 
@@ -244,7 +241,7 @@ const Item = styled(Paper)(({ theme }) => ({
     
 
           </Grid><Grid item xs={2} sm={4} md={4} >
-          <Link  to="/catgeory" >
+          <Link  to="/catgeory"style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
       sx={{
@@ -253,16 +250,9 @@ const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
-
-  
-        // border:'1px solid black',
-        '&:hover': {
-          
-          opacity: [0.9, 0.8, 0.7],
-        },
       }}
     >
-        < FavoriteBorderIcon sx={{color:"black"}} />
+        < FavoriteBorderIcon sx={{color:"red"}} />
 
         </Box>
         <Box
@@ -270,21 +260,16 @@ const Item = styled(Paper)(({ theme }) => ({
         width: 210,
         height: 70,
         py: 2.2,
-      
-     
-        // border:'1px solid black',
+      paddingLeft:'16px',
         backgroundColor: '#f8f7fa',
-        // '&:hover': {
-        // //   backgroundColor: 'primary.main',
-        //   opacity: [0.9, 0.8, 0.7],
-        // },
+       
       }}
     >
        <Typography component="body2"
        sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',
     
 }}
-          variant="h6"    >
+          variant="body2"    >
   Health
           </Typography>
 
@@ -298,7 +283,7 @@ const Item = styled(Paper)(({ theme }) => ({
        
            
           </Grid><Grid item xs={2} sm={4} md={4} >
-          <Link  to="/catgeory" >
+          <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
       sx={{
@@ -307,16 +292,13 @@ const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
-
-  
-        // border:'1px solid black',
         '&:hover': {
           
           opacity: [0.9, 0.8, 0.7],
         },
       }}
     >
-        < BusinessCenterOutlinedIcon sx={{color:"black"}} />
+        < BusinessCenterOutlinedIcon sx={{color:"red"}} />
 
         </Box>
         <Box
@@ -324,21 +306,17 @@ const Item = styled(Paper)(({ theme }) => ({
         width: 210,
         height: 70,
         py: 2.2,
+        paddingLeft:'16px',
       
-     
-        // border:'1px solid black',
         backgroundColor: '#f8f7fa',
-        // '&:hover': {
-        // //   backgroundColor: 'primary.main',
-        //   opacity: [0.9, 0.8, 0.7],
-        // },
+      
       }}
     >
        <Typography component="body2"
        sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',
     
 }}
-          variant="h6"    >
+          variant="body2"    >
   hobbies
           </Typography>
 
@@ -352,7 +330,7 @@ const Item = styled(Paper)(({ theme }) => ({
           </Grid>
           
           <Grid item xs={2} sm={4} md={4} >
-          <Link  to="/catgeory" >
+          <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
       sx={{
@@ -370,7 +348,7 @@ const Item = styled(Paper)(({ theme }) => ({
         },
       }}
     >
-        < BusinessCenterOutlinedIcon sx={{color:"black"}} />
+        < BusinessCenterOutlinedIcon sx={{color:"red"}} />
 
         </Box>
         <Box
@@ -378,21 +356,18 @@ const Item = styled(Paper)(({ theme }) => ({
         width: 210,
         height: 70,
         py: 2.2,
-      
+      paddingLeft:'16px',
      
-        // border:'1px solid black',
+       
         backgroundColor: '#f8f7fa',
-        // '&:hover': {
-        // //   backgroundColor: 'primary.main',
-        //   opacity: [0.9, 0.8, 0.7],
-        // },
+      
       }}
     >
        <Typography component="body2"
        sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',
     
 }}
-          variant="h6"    >
+          variant="body2"    >
   Bussienses
           </Typography>
 
@@ -404,7 +379,7 @@ const Item = styled(Paper)(({ theme }) => ({
             </Link>
     
           </Grid><Grid item xs={2} sm={4} md={4} >
-          <Link  to="/catgeory" >
+          <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
       sx={{
@@ -413,16 +388,9 @@ const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
-
-  
-        // border:'1px solid black',
-        '&:hover': {
-          
-          opacity: [0.9, 0.8, 0.7],
-        },
       }}
     >
-        < LocalBarOutlinedIcon sx={{color:"black"}} />
+        < LocalBarOutlinedIcon sx={{color:"red"}} />
 
         </Box>
         <Box
@@ -430,21 +398,15 @@ const Item = styled(Paper)(({ theme }) => ({
         width: 210,
         height: 70,
         py: 2.2,
-      
-     
-        // border:'1px solid black',
         backgroundColor: '#f8f7fa',
-        // '&:hover': {
-        // //   backgroundColor: 'primary.main',
-        //   opacity: [0.9, 0.8, 0.7],
-        // },
+      paddingLeft:'16px'
       }}
     >
        <Typography component="body2"
        sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',
     
 }}
-          variant="h6"    >
+          variant="body2"    >
 Food&Drink
           </Typography>
 
@@ -457,7 +419,7 @@ Food&Drink
    
           </Grid>
           <Grid item xs={2} sm={4} md={4} >
-          <Link  to="/catgeory" >
+          <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
             <Stack direction="row" spacing={0}>
             <Box
       sx={{
@@ -475,7 +437,7 @@ Food&Drink
         },
       }}
     >
-        < RollerSkatingOutlinedIcon sx={{color:"black"}} />
+        < RollerSkatingOutlinedIcon sx={{color:"red"}} />
 
         </Box>
         <Box
@@ -483,21 +445,16 @@ Food&Drink
         width: 210,
         height: 70,
         py: 2.2,
-      
-     
-        // border:'1px solid black',
+      paddingLeft:'16px',
         backgroundColor: '#f8f7fa',
-        // '&:hover': {
-        // //   backgroundColor: 'primary.main',
-        //   opacity: [0.9, 0.8, 0.7],
-        // },
+      
       }}
     >
        <Typography component="body2"
        sx={{ alignItems:'center' , my:'4', color:'black',textDecoration: 'none',
     
 }}
-          variant="h6"    >
+          variant="body2"    >
  Sports&Fitness
           </Typography>
 

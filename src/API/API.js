@@ -29,6 +29,18 @@ class API {
             });
         });
       }
+
+      getDropdownValues(url, data) {
+        return new Promise((resolve, reject) => {
+          this.api(METHOD.GET, url, data)
+            .then((response) => {
+              resolve(response);
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        });
+      }
     
       post(url, data) {
         

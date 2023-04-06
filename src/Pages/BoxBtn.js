@@ -14,14 +14,15 @@ function BoxBtn() {
       component="section"
       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 9 }}
     >
-      <Link  to="/SeeMore"    >
+      <Link  to="/seemore" style={{ textDecoration: 'none' }}   >
       <Button
         sx={{
           border: '1px solid black',
-          borderRadius: 0,
+          borderRadius: 1,
           height: '500',
           textTransform: 'none',
-          
+          color:'black',
+
           py: 1.2,
           px: 24,
         }}

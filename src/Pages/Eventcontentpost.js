@@ -5,6 +5,7 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  Container,
   Typography,
 } from "@mui/material";
 // import { database,dbRef } from '../firebase';
@@ -24,7 +25,7 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import {  Link } from "react-router-dom";
 
-const Post = () => {
+const Eventcontentpost = () => {
     const homepagedata = useSelector((state) => state.homepagedata.data?.data);
 	console.log('homepagedata',homepagedata);
 
@@ -42,27 +43,32 @@ const Post = () => {
 	}
 	console.log('getData',getData);
   return (
-    // <Layout>
-    <>
-    <Typography variant="h1"  sx={{ fontSize: "1.5rem", lineHeight: "2rem",fontWeight:"700",letterSpacing:"0.25px"}}>
-    Events in Vishākhapatnam
+ 
+    < Box sx={{backgroundColor:"#eeedf2"}} >
+    <Container>
+        <Box >
+    <Typography variant="h1"  sx={{ fontSize: "1.5rem", 
+    lineHeight: "2rem",fontWeight:"700",letterSpacing:"0.25px",marginBottom:"50px" }}>
+ Other events you may like
              {/* {menu.description} */}
              </Typography>
+             </Box>
       <Box sx={{ display: "flex", flexWrap: "wrap" }}>
          
-      {getData.map((itmes,index)=>{	
+      {/* {getData.map((itmes,index)=>{	
 					// console.log("catdata",itmes);
-					return(
+					return( */}
             <Link  to="/event"  style={{ textDecoration: 'none' }}  >
           <Card 
-          sx={{ maxWidth: "280px",  m: 2 }}
+          sx={{ maxWidth: "360px",  m: 2 }}
           >
             <CardActionArea>
           
        <CardMedia
          component="img"
-        sx={{ height: 230, width: 280 }}
-        src={itmes.image} 
+        sx={{ height: 230, width: 360 }}
+        // src={itmes.image} 
+        src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F293070639%2F869140772553%2F1%2Foriginal.20220528-013832?w=200&auto=format%2Ccompress&q=75&sharp=10&s=510bac09cabbb7e555ec0e3e11e065d2"
       
         title="green iguana"
       
@@ -72,14 +78,18 @@ const Post = () => {
                   {/* {menu.name} */}
                 </Typography>
                 <Typography sx={{fontWeight:"700"}}variant="h5">
-                {itmes.tittle}
+                {/* {itmes.tittle} */}
+                Clear Coasts - Beach Cleanup
+
                     </Typography>
                     <Typography  sx={{color:"red",fontWeight:"600",paddingTop:"7px"}}variant="body2">
-                    {itmes.date}
+                    {/* {itmes.date} */}
+                    Sun, Apr 9, 6:00 AM + 45 more events
                     {/* {menu.description} */}
                     </Typography>
                     <Typography variant="body2" sx={{fontWeight:"100",paddingTop:"7px"}}>
-                    {itmes.address}
+                    {/* {itmes.address} */}
+                    Rushikonda Beach • Visakhapatnam, Andhra pradesh, 531036
                     {/* {menu.description} */}
                     </Typography>
                     <Typography variant="body2" sx={{fontWeight:"100",paddingTop:"7px"}}>
@@ -107,13 +117,14 @@ const Post = () => {
             </CardActionArea>
           </Card>
           </Link>
-    )
+    {/* )
                   
-})}
+})} */}
       </Box>
-      </>
-    // </Layout>
+      </Container>
+      </Box>
+    
   );
 };
 
-export default Post;
+export default Eventcontentpost;

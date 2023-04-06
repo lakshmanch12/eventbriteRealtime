@@ -5,7 +5,7 @@
 // export const BASE_URL = "https://hn.algolia.com/api/v1/";
 // export const BASE_URL = "https://team-actimize-be.herokuapp.com/";
 
-export const BASE_URL = "https://6ba4-175-101-156-30.in.ngrok.io/";
+export const BASE_URL = "https://eventbrite-4934a-default-rtdb.firebaseio.com/";
 export const STATUS_CODE = {
   INTERNAL_SERVER_ERROR: 500,
   SUCCESS: 200,

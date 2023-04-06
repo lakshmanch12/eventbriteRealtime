@@ -14,31 +14,26 @@ import axios from "axios";
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const useStyles = makeStyles((theme) => ({
-    typo: {
-    
-        margin: theme.spacing(1),
-        fontSize: "3.25rem",
-        fontWeight: 'bold',
-        fontWeight: "800",
-        letterSpacing: "-3px",
-    
-      
-        // backgroundColor: theme.palette.secondary.main,
-      },
- 
     box: {
       margin: theme.spacing(4, 2),
-    
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
     },
    
     chip:{
-      margin: theme.spacing(2.7, 0, 1), 
+        color:"red",
+      
     },
  
   }));
+  const inputStyle = {
+    fontFamily: 'Open Sans', 
+    fontSize: "18.9px",
+    color:"primary",
+    fontSize: "30px",
+    fontWeight: 'bold'
+  };
  
 
 function Content() {
@@ -82,30 +77,28 @@ const getLocationJs = () => {
   return (
     <>
     <Box   className={classes.box}>
+      
    <Typography variant="h4" gutterBottom  
 //    className={classes.typo}
 sx={{  fontWeight: 'bold',  fontWeight: "800", letterSpacing: ".5px",}}
 
    >
-        popular in  
+        Popular in  
        
        </Typography>
        <KeyboardArrowDownIcon  
-       sx={{  color:"blue"}}
+       sx={{  color:"#002dbd"}}
        />
-       
+        
+
       
         <Input 
         sx={{  fontSize: "30px",color:"blue",  fontWeight: '900',lineHeight:"40px" ,letterSpacing: ".5px"}}
-
-        
-         placeholder= { currLocation.city} 
-        
+        // defaultValue={ currLocation.city} 
+         placeholder= { currLocation.city}
+         focused 
         // inputProps={ariaLabel} 
         />
-      
-
- 
     </Box>
   
     

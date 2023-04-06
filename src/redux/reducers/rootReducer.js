@@ -12,9 +12,13 @@
 
 import { combineReducers } from "redux";
 import userReducer from "./userReducer";
+import loadHomePageReducer from './homepageReducer';
+import loadSeeMorePageReducer from './seemorepageReducer'
 
 const rootReducer = combineReducers({
   user: userReducer,
+  homepagedata:loadHomePageReducer,
+  seemorepagedata:loadSeeMorePageReducer,
 });
 
 export default rootReducer;
