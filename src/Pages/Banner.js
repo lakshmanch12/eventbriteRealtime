@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import theme from "./Theme"
 import {ThemeProvider} from "@material-ui/core";
 import { red } from '@mui/material/colors';
+import {  Link } from "react-router-dom";
 
 // import heroImg from "../media/hero_illustration.png";
 // import CustomButton from "./CustomButton";
@@ -69,8 +70,10 @@ const Banner = () => {
        
           
           
-           
-            <ColorButton  sx={{ my: 7}}
+            <Link  to="/findevent" 
+              
+                >
+               <ColorButton  sx={{ my: 7}}
               type="submit"
             //   fullWidth
             backgroundColor="red"
@@ -81,6 +84,8 @@ const Banner = () => {
             >
           Find your next event
             </ColorButton>
+                </Link>
+         
           </Box>
 
          

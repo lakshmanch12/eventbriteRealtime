@@ -16,6 +16,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import Collapse from '@mui/material/Collapse';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -38,6 +42,25 @@ import GoogleApiWrapper from './Map';
 import { useSelector,useDispatch } from "react-redux";
 import {getSeeMorePageInitiate} from '../redux/actions/seemorepageActions';
 import { useState ,useEffect } from "react";
+import Autocomplete from '@mui/material/Autocomplete';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
+const top100Films = [
+
+   
+  
+  { label: ' Mumbai' },
+  { label: '	Delhi' },
+  { label: 'Bangalore ' },
+  { label: 'Hyderabad '},
+  { label: '	Ahmedabad ' },
+  { label: 'Chennai' },
+  { label: ' Kolkata' },
+  { label: 'Surat' },
+  { label: 'Visakhapatnam', },
+  { label: 'Kanpur'},
+];
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -72,10 +95,23 @@ const Seemorefirst = () =>{
     const handleClose = () => {
       setOpen(false);
     };
+    const [open1, setOpen1] = React.useState(true);
+
+    const clickme = () => {
+      setOpen1(!open1);
+    };
+    const text = {
+      color: '#39364f',
+      fontWeight:"500"
+    }
+    
   return (
-    <Box sx={{ flexGrow: 1  ,marginTop:9}}>
-      <Grid container spacing={0}>
-      <Grid item xs={6} md={2.5}>
+ 
+      <Grid container spacing={2} sx={{ flexGrow: 1  ,marginTop:9}}>
+      <Grid item 
+      xs={12} md={3} 
+      sx={{ display: { xs: "none", sm: "block" } }}
+      >
           <Item>
           <Typography  sx={{color:"#1e0a3c", fontWeight:" 700",paddingLeft:"16px",marginTop:'25px',marginBottom:'25px'}}variant="h4">
              Filters
@@ -149,70 +185,176 @@ Sign in to see events
                 > Off  </Button>
       </ListItem>
       <Divider variant="middle" sx={{flexDirection:"row" ,marginTop:'20px'}} />
-      <ListItem sx={{flexDirection:"row",marginTop:"30px"}}>
-          <Typography  sx={{color:"#39364f", fontWeight:"500", fontSize:"300"}}variant="h6">
-       Date
-            </Typography>
-            <Button sx={{ color:'black',border:'white' ,marginLeft:'120px'}}
-               
-                endIcon={<ArrowRightIcon />}
-                >   </Button>
-      </ListItem>
-      <ListItem sx={{flexDirection:"row",marginTop:"30px"}}>
-      <Typography  sx={{color:"#39364f", fontWeight:"500",}}variant="h6">
-     Price
-            </Typography>
-            <Button sx={{ color:'black',border:'white' ,marginLeft:'113px'}}
-               
-                 endIcon={<ArrowRightIcon />}
-                >   </Button>
-      </ListItem>
+      <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+    
+    >
+    
+      <ListItemButton onClick={clickme}>
+      <ListItemText 
+                     primary={<Typography variant="h6" style={{ color: '#39364f' }}>Date</Typography>}
+                    />
+        {open1 ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open1} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Today</Typography>}
+             />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Tomorrow</Typography>}
+            />
+          </ListItemButton>
+        </List>
+      </Collapse>
+    </List>
+    <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+    
+    >
+    
+      <ListItemButton onClick={clickme}>
+      <ListItemText 
+                     primary={<Typography variant="h6" style={{ color: '#39364f' }}>Price</Typography>}
+                    />
+        {open1 ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open1} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Today</Typography>}
+             />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Tomorrow</Typography>}
+            />
+          </ListItemButton>
+        </List>
+      </Collapse>
+    </List>
+      
+     
       <Divider variant="middle" sx={{flexDirection:"row" ,marginTop:'20px'}} />
-      <ListItem sx={{flexDirection:"row",marginTop:"30px"}}>
-      <Typography  sx={{color:"#39364f", fontWeight:"500",}}variant="h6">
-     Catgeory
-            </Typography>
-            <Button sx={{ color:'black',border:'white' ,marginLeft:'78px'}}
-               
-                 endIcon={<ArrowRightIcon />}
-                >   </Button>
-      </ListItem>
-      <ListItem sx={{flexDirection:"row",marginTop:"30px"}}>
-      <Typography  sx={{color:"#39364f", fontWeight:"500",}}variant="h6">
-  Format
-            </Typography>
-            <Button sx={{ color:'black',border:'white' ,marginLeft:'94px'}}
-               
-                 endIcon={<ArrowRightIcon />}
-                >   </Button>
-      </ListItem>
+      <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+    
+    >
+    
+      <ListItemButton onClick={clickme}>
+      <ListItemText 
+                     primary={<Typography variant="h6" style={{ color: '#39364f' }}>Cateory</Typography>}
+                    />
+        {open1 ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open1} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Today</Typography>}
+             />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Tomorrow</Typography>}
+            />
+          </ListItemButton>
+        </List>
+      </Collapse>
+    </List>
+    <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+    
+    >
+    
+      <ListItemButton onClick={clickme}>
+      <ListItemText 
+                     primary={<Typography variant="h6" style={{ color: '#39364f' }}>Format</Typography>}
+                    />
+        {open1 ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open1} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Today</Typography>}
+             />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Tomorrow</Typography>}
+            />
+          </ListItemButton>
+        </List>
+      </Collapse>
+    </List>
+   
       <Divider variant="middle" sx={{flexDirection:"row" ,marginTop:'20px'}} />
-      <ListItem sx={{flexDirection:"row",marginTop:"30px"}}>
-      <Typography  sx={{color:"#39364f", fontWeight:"500",}}variant="h6">
- Language 
-            </Typography>
-            <Button sx={{ color:'black',border:'white' ,marginLeft:'70px'}}
-               
-                 endIcon={<ArrowRightIcon />}
-                >   </Button>
-      </ListItem>
-      <ListItem sx={{flexDirection:"row",marginTop:"30px"}}>
-      <Typography  sx={{color:"#39364f", fontWeight:"500",}}variant="h6">
-   Currency
-            </Typography>
-            <Button sx={{ color:'black',border:'white' ,marginLeft:'77px'}}
-               
-                 endIcon={<ArrowRightIcon />}
-                >   </Button>
-      </ListItem>
+      <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+    
+    >
+    
+      <ListItemButton onClick={clickme}>
+      <ListItemText 
+                     primary={<Typography variant="h6" style={{ color: '#39364f' }}>Language</Typography>}
+                    />
+        {open1 ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open1} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Today</Typography>}
+             />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Tomorrow</Typography>}
+            />
+          </ListItemButton>
+        </List>
+      </Collapse>
+    </List>
+    <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+    
+    >
+    
+      <ListItemButton onClick={clickme}>
+      <ListItemText 
+                     primary={<Typography variant="h6" style={{ color: '#39364f' }}>Currency</Typography>}
+                    />
+        {open1 ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={open1} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Today</Typography>}
+             />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemText  primary={<Typography variant="body2" style={{ color: '#39364f' }}>Tomorrow</Typography>}
+            />
+          </ListItemButton>
+        </List>
+      </Collapse>
+    </List>
+     
     </List>
           </Item>
           <Divider variant="middle" />
         </Grid>
-        <Grid item xs={6} md={6.5}>
+        <Grid item xs={12} md={6}>
           <Item> 
             <Box sx={{ width: '100%', maxWidth: 960, bgcolor: 'background.paper' }}>
-      <Box sx={{ my: 3, mx: 2 }}>
+      {/* <Box sx={{ my: 3, mx: 2 }}> */}
         <Grid container alignItems="center">
           <Grid item xs>
             
@@ -228,15 +370,20 @@ Sign in to see events
           </Grid>
         </Grid>
         
-        <Typography color="text.secondary" variant="body2">
-         visakhapatnam
-        </Typography>
+        <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      options={top100Films}
+      sx={{ width: 300 }}
+      renderInput={(params) => <TextField {...params} label="event loaction" />}
+    />
       </Box>
       <Divider variant="middle" />
-      {getData.map((itmes,index)=>{	
-        return(
+     
       <Grid item xs={12} md={12}>
       
+      {getData.map((itmes,index)=>{	
+        return(
       <CardActionArea component="a" href="#">
         <Card sx={{ display: 'flex' }}>
           <CardContent sx={{ flex: 1 }}>
@@ -268,9 +415,11 @@ Sign in to see events
 </Box>
         </Card>
       </CardActionArea>
+        )})} 
       </Grid>  
-      )})} 
-    </Box>
+    
+   
+   
     </Item>
     <Divider variant="middle" />
     <Divider  sx={{margin:'20px'}} />
@@ -288,18 +437,15 @@ Sign in to see events
        </Container>
         
         </Grid>
-      
-
-      
-
-        <Grid item xs={7} md={3}>
+        <Grid item xs={7}  md={2} 
+         sx={{ display: { xs: "none", sm: "block"} }}>
          
         <GoogleApiWrapper/>
          
         </Grid>
        
       </Grid>
-    </Box>
+   
   );
 }
 export default Seemorefirst;

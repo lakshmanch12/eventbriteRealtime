@@ -27,14 +27,23 @@ const useStyles = makeStyles((theme) => ({
     },
  
   }));
-  const inputStyle = {
-    fontFamily: 'Open Sans', 
-    fontSize: "18.9px",
-    color:"primary",
-    fontSize: "30px",
-    fontWeight: 'bold'
-  };
  
+  const styles = {
+    'input-label': {
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      width: '100%',
+      color: 'red'
+    },
+  
+    'input': {
+      '&::placeholder': {
+        textOverflow: 'ellipsis !important',
+        color: 'blue !important'
+      }
+    }
+  };
 
 function Content() {
     const classes = useStyles();
@@ -92,13 +101,12 @@ sx={{  fontWeight: 'bold',  fontWeight: "800", letterSpacing: ".5px",}}
         
 
       
-        <Input 
-        sx={{  fontSize: "30px",color:"blue",  fontWeight: '900',lineHeight:"40px" ,letterSpacing: ".5px"}}
-        // defaultValue={ currLocation.city} 
+        <Input  sx={{  fontSize: "30px",
+        color:"#002dbd  ! important", opacity:"2", fontWeight: '900',lineHeight:"40px" ,letterSpacing: ".5px"}}
          placeholder= { currLocation.city}
-         focused 
-        // inputProps={ariaLabel} 
-        />
+    
+        />
+
     </Box>
   
     
