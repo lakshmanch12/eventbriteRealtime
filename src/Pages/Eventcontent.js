@@ -11,7 +11,7 @@ import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 
 import { red } from '@mui/material/colors';
-
+import Demo from "./Demo"
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
@@ -50,7 +50,7 @@ const Eventcontent = () => {
     <div><Container>
     <Box sx={{ flexGrow: 1 ,marginTop:"20px"}}>
 <Grid container spacing={2}>
-<Grid item xs={7.5}>
+<Grid item xs={12} md={9} sm={4}>
   <Item>
   <Typography component="h2" variant="h6" sx={{fontWeight:'800',color:"#1e0a3c"}}>
   Apr 4
@@ -201,7 +201,7 @@ const Eventcontent = () => {
     About this event
             </Typography>
         <Grid container alignItems="center" >
-        <Grid item xs={2} sm={4} md={12} >
+        <Grid item xs={12} sm={4} md={6} >
                 
                
                 <Stack direction="row"textDecoration= 'none' spacing={0}>
@@ -502,12 +502,13 @@ Thu, Apr 6, 11:00 AM
   </Item>
   
 </Grid>
-<Grid item xs={4}>
+<Grid item xs={9} md={3} sm={4}  
+sx={{ display: { xs: "none", sm: "block", md:"block"}}}
+>
   <Item sx={{p:3}} >
-  <Box  sx={{ p: 1, alignItems:"center",  borderRadius: 3, border: '2px solid blue' }}>
+  <Box  sx={{ p: 1, alignItems:"center",  flexGrow: 1 ,  borderRadius: 3, border: '2px solid blue' }}>
   <Grid container alignItems="center">
           <Grid item xs > 
-          
             <Typography  variant="h6" component="div" sx={{fontSize: '18px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px"}}>
             General Admission
             </Typography>
@@ -547,6 +548,7 @@ Thu, Apr 6, 11:00 AM
       </Button>
     
   </Item>
+
 </Grid>
 
 
@@ -555,6 +557,8 @@ Thu, Apr 6, 11:00 AM
 
     </Container>
     <Eventcontentpost/>
+   
+    
     
     
 
