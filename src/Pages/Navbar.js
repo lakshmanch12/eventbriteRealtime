@@ -15,7 +15,6 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import {  Link } from "react-router-dom";
 import {
 
     Avatar,
@@ -93,7 +92,6 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = () => {
     const theme = useTheme();
   const classes = useStyles();
-  const pages = ['Products', 'Pricing', 'Blog'];
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -226,11 +224,9 @@ const Navbar = () => {
           <ArrowDropDownIcon/>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
-            
-            <Link to="/Login"><Typography className={classes.title} variant="body1" noWrap>
+            <Typography className={classes.title} variant="body1" noWrap>
          Login 
           </Typography>
-          </Link>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
             <Typography className={classes.title} variant="body1" noWrap>

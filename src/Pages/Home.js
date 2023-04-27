@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+import Navbar from './Navbar'
 import Banner from './Banner';
 import Footer from './Footer';
 import Content from './Content';
@@ -29,7 +29,7 @@ const Home = (props) => {
              </Typography>
              */}
 
-             <Header/>
+             <Navbar/>
              </ThemeProvider>
              <Banner/>
             

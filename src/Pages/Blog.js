@@ -18,7 +18,10 @@ const Blog = () => {
     marginTop: theme.spacing(7),
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
- 
+    //   alignItems: "center",
+    //   textAlign: "center",
+    //   backgroundColor: "red",
+    //   filter:"blur(50px) brightness(1.9)",
     },
   }));
 

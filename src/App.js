@@ -5,10 +5,7 @@ import Login from "./Pages/Login";
 import Demo from "./Pages/Demo";
 import Register from "./Pages/Register";
 import Event from "./Pages/Event";
-import Findevent from "./Pages/Findevent";
 import Catgeory from "./Pages/Catgeory";
-import Pricing from "./Pages/Pricing";
-import Sales from "./Pages/Sales";
 import Sub from "./Pages/Sub";
 import Seemore from "./Pages/Seemore";
 import {ThemeProvider} from "@material-ui/core";
@@ -33,9 +30,6 @@ function App() {
       <Route path="seemore"  exact element={ <Seemore/> } />
       <Route path="catgeory"  exact element={ <Catgeory/> } />
       <Route path="event"  exact element={ <Event/> } />
-      <Route path="findevent"  exact element={ <Findevent/> } />
-      <Route path="Pricing"  exact element={ <Pricing/> } />
-      <Route path="Sales"  exact element={ <Sales/> } />
       </Routes>
     </div>
   );
