@@ -10,6 +10,7 @@ import ContactsIcon from "@mui/icons-material/Contacts";
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
+import{Link} from "react-router-dom";
 // import logoImg from "../media/logo.png";
 import { Container } from "@mui/system";
 import CustomButton from "./CustomButton";
@@ -140,7 +141,7 @@ export const Header = () => {
     fontWeight: "bold",
     cursor: "pointer",
     "&:hover": {
-      color: "#fff",
+      color: "Black ",
     },
   }));
 
@@ -235,14 +236,20 @@ export const Header = () => {
         }}
       >
               <NavbarLinksBox>
-          <NavLink variant="body2">Home</NavLink>
-          <NavLink variant="body2">Features</NavLink>
-          <NavLink variant="body2">Services</NavLink>
-          <NavLink variant="body2">Listed</NavLink>
-          <NavLink variant="body2">Contact</NavLink>
+         
+          <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Sales </NavLink></Link>
+          <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
+          <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support team </NavLink></Link>
+           
+         
+          {/* <NavLink to="/sales" variant="body2">Services</NavLink> */}
+          {/* <NavLink variant="body2">Listed</NavLink>
+          <NavLink variant="body2">Contact</NavLink> */}
         </NavbarLinksBox>
-        <NavLink variant="body2">SignUp</NavLink>
-        <NavLink variant="body2">Login</NavLink>
+        <Link  to="/register" style={{ textDecoration: 'none' }}><NavLink variant="body2" > SignUp </NavLink></Link>
+        <Link  to="/login" style={{ textDecoration: 'none' }}><NavLink variant="body2" > Login </NavLink></Link>
+
+    
        
       </Box>
     {/* </NavbarContainer> */}
