@@ -8,6 +8,12 @@ import Pricingthree from './Pricingthree';
 import Pricingfive from './Pricingfive';
 import Pricingfour from './Pricingfour';
 import Salesone from './Salesone';
+import Salestwo from './Salestwo';
+import Salesthree from './Salesthree';
+import Salesfour from './Salesfour';
+import Salesfive from './Salesfive';
+import Salesvedio from './Salesvedio';
+
 import Banner from './Banner';
 
 import {ThemeProvider, Box,Button,Container,Typography} from "@material-ui/core";
@@ -23,10 +29,15 @@ const Pricing  = () => {
             
             <Navbar/>
             </ThemeProvider>
+            < Salesvedio/>
+            < Salesfive/>
+            < Salestwo/>
             < Salesone/>
             < Pricingfour/>
             < Pricingfive/>
            <Pricingtwo/>
+           <Salesthree/>
+           <Salesfour/>
            <Banner/>
          
        

@@ -11,6 +11,7 @@ import Pricing from "./Pages/Pricing";
 import Sales from "./Pages/Sales";
 import Sub from "./Pages/Sub";
 import Seemore from "./Pages/Seemore";
+import Lakshman from "./Pages/Lakshman";
 import {ThemeProvider} from "@material-ui/core";
 import theme from './Pages/Theme';
 import { Routes,Route } from 'react-router-dom';
@@ -36,6 +37,7 @@ function App() {
       <Route path="findevent"  exact element={ <Findevent/> } />
       <Route path="Pricing"  exact element={ <Pricing/> } />
       <Route path="Sales"  exact element={ <Sales/> } />
+      <Route path="lakshman"  exact element={ <Lakshman/> } />
       </Routes>
     </div>
   );
