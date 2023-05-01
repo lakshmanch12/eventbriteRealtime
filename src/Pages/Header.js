@@ -141,7 +141,7 @@ export const Header = () => {
     fontWeight: "bold",
     cursor: "pointer",
     "&:hover": {
-      color: "Black ",
+      color: "Black",
     },
   }));
 

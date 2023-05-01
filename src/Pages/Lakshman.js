@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Eventcontent from './Eventcontent';
 import Lakshmanone from './Lakshmanone';
+import Lakshmantwo from './Lakshmantwo';
 import Pricingtwo from './Pricingtwo';
 import Pricingthree from './Pricingthree';
 import Pricingfour from './Pricingfour';
@@ -20,7 +21,7 @@ const Lakshman  = () => {
             
             <Navbar/>
             </ThemeProvider>
-          
+            < Lakshmantwo/>
           < Lakshmanone/>
             
             <Footer/>

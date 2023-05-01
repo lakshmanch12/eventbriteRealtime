@@ -17,7 +17,7 @@ const Lakshmanone = () => {
   }));
 
   const ImgContainer = styled(Box)(({ theme }) => ({
-    width: "70%",
+    width: "80%",
     [theme.breakpoints.down("md")]: {
       display: "flex",
       flexDirection: "column",
@@ -47,10 +47,10 @@ const Lakshmanone = () => {
     marginTop: theme.spacing(7),
     display: "flex",
     justifyContent: "space-between",
-    padding: theme.spacing(0, 8, 0, 6),
+    padding: theme.spacing(0, 5, 0, 5),
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      gap: theme.spacing(2),
+      gap: theme.spacing(5),
     },
   }));
 
@@ -80,13 +80,13 @@ const Lakshmanone = () => {
                 my: 3,
               }}
             >
-            lakshman chimmiti
+            lakshman
             </Typography>
 
             <Typography
                sx={{
                 fontSize: "35px",
-                color: "#f05537",
+                color: "#000339",
                 fontWeight: "700",
                 my: 3,
               }}
@@ -115,8 +115,8 @@ Use Your Code To Tell Your Developer Journey
               alignItems: "center",
             }}
           >
-            <LargeText>Developer</LargeText>
-            <SmallText>Being A Developer Like A lover</SmallText>
+            <LargeText>2500+</LargeText>
+            <SmallText>local users</SmallText>
           </Box>
 
           <Box
@@ -126,8 +126,8 @@ Use Your Code To Tell Your Developer Journey
               alignItems: "center",
             }}
           >
-            <LargeText>Coder</LargeText>
-            <SmallText>Code never lies, comments sometimes do</SmallText>
+            <LargeText>3000+</LargeText>
+            <SmallText>bussienes users</SmallText>
           </Box>
 
           <Box
@@ -137,9 +137,8 @@ Use Your Code To Tell Your Developer Journey
               alignItems: "center",
             }}
           >
-            <LargeText>programmer</LargeText>
-            <SmallText>Every programmer is an author.</SmallText>
-
+            <LargeText>3500+</LargeText>
+            <SmallText>support team</SmallText>
           </Box>
         </TextFlexbox>
       </Container>
