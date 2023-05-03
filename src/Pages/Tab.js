@@ -94,7 +94,7 @@ const Item = styled(Paper)(({ theme }) => ({
           </Typography>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 16 }}>
       
-         <Grid item xs={2} sm={4} md={4} >
+         <Grid item xs={12} sm={4} md={4} >
                 
             <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
             <Stack direction="row"textDecoration= 'none' spacing={0}>
@@ -135,7 +135,7 @@ variant="body2"   >
             </Link>
           
           </Grid>
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
             <Stack direction="row" spacing={0}>
             <Box
@@ -192,7 +192,7 @@ variant="body2"   >
 
             {/* <Item><GppGoodOutlinedIcon/>Performing&Visual Arts</Item> */}
           </Grid>
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
@@ -240,7 +240,8 @@ variant="body2"   >
             </Link>
     
 
-          </Grid><Grid item xs={2} sm={4} md={4} >
+          </Grid>
+          <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory"style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
@@ -282,7 +283,8 @@ variant="body2"   >
           
        
            
-          </Grid><Grid item xs={2} sm={4} md={4} >
+          </Grid>
+          <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
@@ -329,7 +331,7 @@ variant="body2"   >
        
           </Grid>
           
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
@@ -378,7 +380,8 @@ variant="body2"   >
 
             </Link>
     
-          </Grid><Grid item xs={2} sm={4} md={4} >
+          </Grid>
+          <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
             <Box
@@ -418,7 +421,7 @@ Food&Drink
             </Link>
    
           </Grid>
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
             <Stack direction="row" spacing={0}>
             <Box

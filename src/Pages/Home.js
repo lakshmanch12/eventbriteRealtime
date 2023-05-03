@@ -21,13 +21,7 @@ const Home = (props) => {
     <div>
         <ThemeProvider theme={theme}>
             
-             {/* i am your  home page  */}
-             {/* <Typography
-             varient="h2"
-             >
-             welcome {state}
-             </Typography>
-             */}
+            
 
              <Header/>
              </ThemeProvider>

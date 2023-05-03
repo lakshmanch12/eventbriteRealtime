@@ -108,8 +108,7 @@ const Seemorefirst = () =>{
   return (
  
       <Grid container spacing={2} sx={{ flexGrow: 1  ,marginTop:9}}>
-      <Grid item 
-      xs={12} md={3} 
+      <Grid item  xs={12} md={3}  sm={4}
       sx={{ display: { xs: "none", sm: "block" } }}
       >
           <Item>
@@ -351,7 +350,7 @@ Sign in to see events
           </Item>
           <Divider variant="middle" />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} sm={5}>
           <Item> 
             <Box sx={{ width: '100%', maxWidth: 960, bgcolor: 'background.paper' }}>
       {/* <Box sx={{ my: 3, mx: 2 }}> */}
@@ -437,7 +436,7 @@ Sign in to see events
        </Container>
         
         </Grid>
-        <Grid item xs={7}  md={2} 
+        <Grid item xs={7}  md={2} sm={3}
          sx={{ display: { xs: "none", sm: "block"} }}>
          
         <GoogleApiWrapper/>

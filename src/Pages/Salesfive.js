@@ -49,7 +49,7 @@ const Salesfive = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-      marginTop:"-205px",
+      marginTop:"-05px",
         backgroundColor: "#000339",
       }}
     >
