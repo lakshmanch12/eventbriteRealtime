@@ -115,16 +115,28 @@ export const Header = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["sales", "pricing", "support team",].map(
-          (text, index) => (
-            <ListItem key={text} disablePadding>
+        {/* {["sales", "pricing", "support team",].map(
+          (text, index) => ( */}
+            <ListItem  disablePadding>
               <ListItemButton>
-               
-                <ListItemText primary={text} />
+              <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Sales </NavLink></Link>
+                {/* <ListItemText primary="sales" /> */}
               </ListItemButton>
             </ListItem>
-          )
-        )}
+            <ListItem  disablePadding>
+              <ListItemButton>
+              <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
+
+              </ListItemButton>
+            </ListItem>
+            <ListItem  disablePadding>
+              <ListItemButton>
+              <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support team </NavLink></Link>
+
+              </ListItemButton>
+            </ListItem>
+          {/* ) */}
+      
       </List>
     </Box>
   );
