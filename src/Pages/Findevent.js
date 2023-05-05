@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Header from './Header';
 import {ThemeProvider, Box,Button,Container,Typography} from "@material-ui/core";
 import theme from './Theme';
 import Footer from './Footer';
@@ -16,7 +16,7 @@ const findevent = () => {
   return (
     <div>
         <ThemeProvider theme={theme}>
-            <Navbar/>
+            <Header/>
             </ThemeProvider>
             <Findeventone/>
          

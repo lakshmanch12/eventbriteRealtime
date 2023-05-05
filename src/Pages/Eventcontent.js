@@ -50,7 +50,7 @@ const Eventcontent = () => {
     <div><Container>
     <Box sx={{ flexGrow: 1 ,marginTop:"20px"}}>
 <Grid container spacing={2}>
-<Grid item xs={12} md={9} sm={4}>
+<Grid item xs={12} md={8} sm={12}>
   <Item>
   <Typography component="h2" variant="h6" sx={{fontWeight:'800',color:"#1e0a3c"}}>
   Apr 4
@@ -79,7 +79,7 @@ const Eventcontent = () => {
         
       </Box>
       
-    <Box sx={{ my: 5, mx: -1 }}>
+    {/* <Box sx={{ my: 5, mx: -1 }}>
     <Typography  variant="h2" component="div" sx={{fontSize: '25px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px"}}>
     When and where
             </Typography>
@@ -195,7 +195,7 @@ const Eventcontent = () => {
         </Grid>
         
         
-      </Box>
+      </Box> */}
       <Box >
     <Typography  variant="h2" component="div" sx={{fontSize: '25px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px"}}>
     About this event
@@ -502,7 +502,7 @@ Thu, Apr 6, 11:00 AM
   </Item>
   
 </Grid>
-<Grid item xs={9} md={3} sm={4}  
+<Grid item xs={12} md={4} sm={4}  
 sx={{ display: { xs: "none", sm: "block", md:"block"}}}
 >
   <Item sx={{p:3}} >
@@ -550,20 +550,11 @@ sx={{ display: { xs: "none", sm: "block", md:"block"}}}
   </Item>
 
 </Grid>
-
-
 </Grid>
 </Box>
 
     </Container>
     <Eventcontentpost/>
-   
-    
-    
-    
-
-
-
     </div>
   )
 }

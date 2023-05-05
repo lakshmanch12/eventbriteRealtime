@@ -16,7 +16,7 @@ const Banner = () => {
     display: "flex",
     justifyContent: "center",
     gap: theme.spacing(5),
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(1),
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       alignItems: "center",
@@ -57,7 +57,7 @@ const Banner = () => {
                 fontSize: "18px",
                 color: "white",
                 fontWeight: "500",
-                mt: 10,
+                mt: 5,
                 mb: 4,
               }}
             >

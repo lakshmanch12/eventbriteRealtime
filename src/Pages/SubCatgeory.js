@@ -149,7 +149,7 @@ const Hero = () => {
           </Typography>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 16 }}>
       
-         <Grid item xs={2} sm={4} md={4} >
+         <Grid item xs={12} sm={4} md={4} >
                 
        
             <Stack direction="row"textDecoration= 'none' spacing={0}>
@@ -186,7 +186,7 @@ const Hero = () => {
        
       </Stack>   
           </Grid>
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
          
             <Stack direction="row" spacing={0}>
             <Box
@@ -224,7 +224,7 @@ const Hero = () => {
       </Stack>
           </Grid>
          
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
 
             <Stack direction="row" spacing={0}>
             <Box
@@ -267,7 +267,7 @@ const Hero = () => {
        
       </Stack> 
           </Grid>
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
           
           <Stack direction="row" spacing={0}>
           <Box
@@ -322,7 +322,7 @@ Charity & Causes
   
 
         </Grid>
-        <Grid item xs={2} sm={4} md={4} >
+        <Grid item xs={12} sm={4} md={4} >
         
         <Stack direction="row" spacing={0}>
         <Box
@@ -372,7 +372,7 @@ Bussienses
     
 
       </Grid>
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
       
             <Stack direction="row" spacing={0}>
             <Box
@@ -414,7 +414,7 @@ Bussienses
           </Grid>
           
          
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
         
             <Stack direction="row" spacing={0}>
             <Box
@@ -466,7 +466,7 @@ Film & media
 
    
           </Grid>
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
        
             <Stack direction="row" spacing={0}>
             <Box
@@ -522,7 +522,7 @@ Film & media
 
            
           </Grid>
-          <Grid item xs={2} sm={4} md={4} >
+          <Grid item xs={12} sm={4} md={4} >
       
       <Stack direction="row" spacing={0}>
       <Box
@@ -571,7 +571,7 @@ Film & media
  
     </Grid>
     
-    <Grid item xs={2} sm={4} md={4} >
+    <Grid item xs={12} sm={4} md={4} >
   
       <Stack direction="row" spacing={0}>
       <Box
@@ -621,7 +621,7 @@ Travel & Outdoor
   
 
     </Grid>
-    <Grid item xs={2} sm={4} md={4} >
+    <Grid item xs={12} sm={4} md={4} >
   
       <Stack direction="row" spacing={0}>
       <Box
@@ -673,7 +673,7 @@ Food&Drink
 
 
     </Grid>
-    <Grid item xs={2} sm={4} md={4} >
+    <Grid item xs={12} sm={4} md={4} >
  
       <Stack direction="row" spacing={0}>
       <Box
@@ -700,25 +700,11 @@ sx={{
  sx={{ alignItems:'center' , my:'4', marginLeft:"16px", color:'black',textDecoration: 'none'}}
     variant="body2" > Government </Typography>
 </Box>
-
- 
-</Stack>
-
-  
-
-
-     
+</Stack> 
     </Grid>
       </Grid>
     </Box>
-   
-   
     </Container>
-    <View/>
-
-
-    
-   
     </>
   );
 };

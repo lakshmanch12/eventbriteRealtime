@@ -137,7 +137,7 @@ const showMoreBtn = () =>{
          
             {
               items.map(i=> {
-                return  <Grid item xs={2} sm={4} md={4} direction="row" >
+                return  <Grid item xs={12} sm={4} md={4} direction="row" >
                 <Box sx={{
                   width: 80,
                   height: 30,

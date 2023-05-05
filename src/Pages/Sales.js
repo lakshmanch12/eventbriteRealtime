@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Header from './Header';
 import Footer from './Footer';
 import Eventcontent from './Eventcontent';
 import Pricingone from './Pricingone';
@@ -27,7 +27,7 @@ const Pricing  = () => {
     <div>
          <ThemeProvider theme={theme}>
             
-            <Navbar/>
+            <Header/>
             </ThemeProvider>
             < Salesvedio/>
             < Salesfive/>

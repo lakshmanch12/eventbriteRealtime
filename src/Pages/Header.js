@@ -74,7 +74,9 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       [theme.breakpoints.up('md')]: {
         width: '50ch',
+        display: "block",
       },
+    
     },
     sectionDesktop: {
       display: 'none',
@@ -90,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export const Header = () => {
+ const Header = () => {
     const classes = useStyles();
   const [mobileMenu, setMobileMenu] = useState({
     left: false,
@@ -131,7 +133,7 @@ export const Header = () => {
             </ListItem>
             <ListItem  disablePadding>
               <ListItemButton>
-              <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support team </NavLink></Link>
+              <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link>
 
               </ListItemButton>
             </ListItem>
@@ -142,12 +144,12 @@ export const Header = () => {
   );
 
   const NavLink = styled(Typography)(({ theme }) => ({
-    fontSize: "14px",
+    fontSize: "13px",
     color: "#4F5361",
-    fontWeight: "bold",
+    fontWeight: "600",
     cursor: "pointer",
     "&:hover": {
-      color: "Black",
+      color: "#39364f",
     },
   }));
 
@@ -155,7 +157,7 @@ export const Header = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    gap: theme.spacing(3),
+    gap: theme.spacing(5),
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
@@ -176,9 +178,9 @@ export const Header = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: theme.spacing(1),
+    padding: theme.spacing(),
     [theme.breakpoints.down("md")]: {
-      padding: theme.spacing(1),
+      // padding: theme.spacing(),
     },
   }));
 
@@ -201,7 +203,7 @@ export const Header = () => {
         }}
       >
         <Box sx={{ display: "flex",  }}>
-        <CustomMenuIcon onClick={toggleDrawer("left", true)} />
+        <CustomMenuIcon  sx={{marginTop:"10px"}} onClick={toggleDrawer("left", true)} />
           <Drawer
             anchor="left"
             open={mobileMenu["left"]}
@@ -243,9 +245,9 @@ export const Header = () => {
       >
               <NavbarLinksBox>
          
-          <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Sales </NavLink></Link>
+          <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Sales </NavLink></Link>
           <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
-          <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support team </NavLink></Link>
+          <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link>
            
          
           {/* <NavLink to="/sales" variant="body2">Services</NavLink> */}

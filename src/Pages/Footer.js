@@ -1,13 +1,14 @@
 import { styled, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
+import { Icon } from '@iconify/react';
 
 // import fbIcon from "../media/fbicon.png";
 // import twitterIcon from "../media/twittericon.png";
 // import linkedinIcon from "../media/linkedinicon.png";
 
 const Footer = () => {
-  const CustomContainer = styled(Container)(({ theme }) => ({
+  const CustomContainer = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "space-around",
     gap: theme.spacing(5),
@@ -27,9 +28,9 @@ const Footer = () => {
   }));
 
   const FooterLink = styled("span")(({ theme }) => ({
-    fontSize: "16px",
+    fontSize: "13px",
     color: "white",
-    fontWeight: "300",
+    fontWeight: "200",
     cursor: "pointer",
     "&:hover": {
       color: "white",
@@ -38,7 +39,7 @@ const Footer = () => {
 
   return (
     <Box sx={{ py: 10,backgroundColor: "#1e0a3c" }}>
-      <CustomContainer>
+    
         <CustomContainer>
           <Box>
             <Typography
@@ -49,56 +50,26 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              Products
+              Use Eventbrite
             </Typography>
 
-            <FooterLink>Listing</FooterLink>
+            <FooterLink>Create Events</FooterLink>
             <br />
-            <FooterLink>Properties</FooterLink>
+            <FooterLink>Pricing</FooterLink>
             <br />
-            <FooterLink>Agents</FooterLink>
+            <FooterLink>Eventbrite Boost</FooterLink>
             <br />
-            <FooterLink>Blog</FooterLink>
-          </Box>
-
-          <Box>
-            <Typography
-              sx={{
-                fontSize: "20px",
-                color: "white",
-                fontWeight: "700",
-                mb: 2,
-              }}
-            >
-              Resources
-            </Typography>
-
-            <FooterLink>Our Homes</FooterLink>
+            <FooterLink>Eventbrite Mobile Ticket App</FooterLink>
             <br />
-            <FooterLink>Stories</FooterLink>
+            <FooterLink>Eventbrite Check-In App</FooterLink>
             <br />
-            <FooterLink>Video</FooterLink>
+            <FooterLink>Eventbrite App Marketplace</FooterLink>
             <br />
-            <FooterLink>Free Trial</FooterLink>
-          </Box>
-
-          <Box>
-            <Typography
-              sx={{
-                fontSize: "20px",
-                color: "white",
-                fontWeight: "700",
-                mb: 2,
-              }}
-            >
-              Company
-            </Typography>
-
-            <FooterLink>Partnerships</FooterLink>
+            <FooterLink>Event Registration Software</FooterLink>
             <br />
-            <FooterLink>Terms of use</FooterLink>
+            <FooterLink>Content Standards</FooterLink>
             <br />
-            <FooterLink>Privacy</FooterLink>
+            <FooterLink>FAQs</FooterLink>
             <br />
             <FooterLink>Sitemap</FooterLink>
           </Box>
@@ -112,36 +83,99 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              Get in touch
+             Plan Events
             </Typography>
 
+            <FooterLink>Sell Tickets Online</FooterLink>
+            <br />
+            <FooterLink>Event Planning</FooterLink>
+            <br />
+            <FooterLink>Sell Concert Tickets Online</FooterLink>
+            <br />
+            <FooterLink>Event Payment System</FooterLink>
+            <br />
+            <FooterLink>Solutions for Professional Services</FooterLink>
+            <br />
+            <FooterLink>Event Management Software </FooterLink>
+            <br />
+            <FooterLink>Community Engagement </FooterLink>
+            <br />
+            <FooterLink>Virtual Events Platform </FooterLink>
+            <br />
+            <FooterLink>QR Codes for Event Check-In </FooterLink>
+            <br />
+            <FooterLink>Post your event online</FooterLink>
+          </Box>
+
+          <Box>
             <Typography
               sx={{
-                fontSize: "16px",
+                fontSize: "20px",
                 color: "white",
-                fontWeight: "500",
+                fontWeight: "700",
                 mb: 2,
               }}
             >
-              You’ll find your next home, in any style you prefer.
+            Find Events
             </Typography>
 
-            <IconBox>
-              {/* <img src={fbIcon} alt="fbIcon" style={{ cursor: "pointer" }} /> */}
-              {/* <img
-                src={twitterIcon}
-                alt="twitterIcon"
-                style={{ cursor: "pointer" }}
-              /> */}
-              {/* <img
-                src={linkedinIcon}
-                alt="linkedinIcon"
-                style={{ cursor: "pointer" }}
-              /> */}
-            </IconBox>
+            <FooterLink>New Orleans Food & Drink Events</FooterLink>
+            <br />
+            <FooterLink>San Francisco Holiday Events</FooterLink>
+            <br />
+            <FooterLink>Tulum Music Events</FooterLink>
+            <br />
+            <FooterLink>Denver Hobby Events</FooterLink>
+            <br />
+            <FooterLink>Atlanta Pop Music Events</FooterLink>
+            <br />
+            <FooterLink>New York Events</FooterLink>
+            <br />
+            <FooterLink> Chicago Events</FooterLink>
+            <br />
+            <FooterLink>Events in Dallas Today</FooterLink>
+            <br />
+            <FooterLink>Los Angeles Events</FooterLink>
+            <br />
+            <FooterLink>Washington Events</FooterLink>
+          </Box>
+
+          <Box>
+            <Typography
+              sx={{
+                fontSize: "20px",
+                color: "white",
+                fontWeight: "700",
+                mb: 2,
+              }}
+            >
+             Connect With Us
+            </Typography>
+            <FooterLink>Contact Support</FooterLink>
+            <br />
+            <FooterLink> Twitter  </FooterLink>
+            <br />
+            <FooterLink> Facebook </FooterLink>
+            <br />
+            <FooterLink>LinkedIn  </FooterLink>
+            <br />
+            <FooterLink>Instagram   </FooterLink>
+            <br />
+           
+            
+
+           
+            
+
+            <IconBox >
+              <Icon icon="gg:facebook" width="25" height="25" color="white" />
+              <Icon icon="fe:messanger" width="25" height="25" color="white" />
+              <Icon  icon="basil:linkedin-solid" width="25" height="25" color="white" />
+              <Icon icon="mdi:twitter" width="25" height="25" color="white" />
+            </IconBox>   
           </Box>
         </CustomContainer>
-      </CustomContainer>
+     
     </Box>
   );
 };
