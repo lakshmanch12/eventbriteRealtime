@@ -1,198 +1,221 @@
-import React from 'react';
-import { alpha, makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import MenuIcon from "@mui/icons-material/Menu";
+import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
+import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import HomeIcon from "@mui/icons-material/Home";
+import ContactsIcon from "@mui/icons-material/Contacts";
 import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import {  Link } from "react-router-dom";
+import InputBase from '@material-ui/core/InputBase';
+import { alpha, makeStyles } from '@material-ui/core/styles';
+import{Link} from "react-router-dom";
+// import logoImg from "../media/logo.png";
+import { Container } from "@mui/system";
+import CustomButton from "./CustomButton";
 import {
-
-    Avatar,
-    CssBaseline,
-  
-   
-    useTheme,
-    useMediaQuery,
-  } from "@material-ui/core";
-
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  styled,
+} from "@mui/material";
+import { useState } from "react";
+import { LinkOffTwoTone } from "@mui/icons-material";
 const useStyles = makeStyles((theme) => ({
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
+    grow: {
+      flexGrow: 1,
     },
-  },
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.black, 0.15),
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    menuButton: {
+      marginRight: theme.spacing(2),
     },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  inputRoot: {
-    color: 'inherit',
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(5)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '50ch',
-    },
-  },
-  sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
-  },
-  sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
+    title: {
       display: 'none',
+      [theme.breakpoints.up('sm')]: {
+        display: 'block',
+      },
     },
-  },
-}));
+    search: {
+      position: 'relative',
+      
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: alpha(theme.palette.common.black, 0.15),
+      '&:hover': {
+        backgroundColor: alpha(theme.palette.common.white, 0.25),
+      },
+      marginRight: theme.spacing(2),
+      marginLeft: 0,
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(3),
+        width: 'auto',
+      },
+    },
+    searchIcon: {
+      padding: theme.spacing(0, 2),
+      height: '100%',
+      position: 'absolute',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    inputRoot: {
+      color: 'inherit',
+    },
+    inputInput: {
+      padding: theme.spacing(2, 0, 0, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(5)}px)`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('md')]: {
+        width: '50ch',
+        display: "block",
+      },
+    
+    },
+    sectionDesktop: {
+      display: 'none',
+      [theme.breakpoints.up('md')]: {
+        display: 'flex',
+      },
+    },
+    sectionMobile: {
+      display: 'flex',
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
+    },
+  }));
 
-const Navbar = () => {
-    const theme = useTheme();
-  const classes = useStyles();
-  const pages = ['Products', 'Pricing', 'Blog'];
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+ const Navbar = () => {
+    const classes = useStyles();
+  const [mobileMenu, setMobileMenu] = useState({
+    left: false,
+  });
 
-  const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.type === "Tab" || event.type === "Shift")
+    ) {
+      return;
+    }
 
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
+    setMobileMenu({ ...mobileMenu, [anchor]: open });
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
-
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
-
-  const menuId = 'primary-search-account-menu';
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 150 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
+      <List>
+        {/* {["sales", "pricing", "support team",].map(
+          (text, index) => ( */}
+            <ListItem  disablePadding>
+              <ListItemButton>
+              <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Sales </NavLink></Link>
+                {/* <ListItemText primary="sales" /> */}
+              </ListItemButton>
+            </ListItem>
+            <ListItem  disablePadding>
+              <ListItemButton>
+              <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
+
+              </ListItemButton>
+            </ListItem>
+            <ListItem  disablePadding>
+              <ListItemButton>
+              <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link>
+
+              </ListItemButton>
+            </ListItem>
+          {/* ) */}
+      
+      </List>
+    </Box>
   );
 
-  const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
+  const NavLink = styled(Typography)(({ theme }) => ({
+    fontSize: "13px",
+    color: "#4F5361",
+    fontWeight: "600",
+    cursor: "pointer",
+    "&:hover": {
+      color: "#39364f",
+    },
+  }));
+
+  const NavbarLinksBox = styled(Box)(({ theme }) => ({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: theme.spacing(5),
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+  }));
+
+  const CustomMenuIcon = styled(MenuIcon)(({ theme }) => ({
+    cursor: "pointer",
+    display: "none",
+    padding:"2",
+    marginTop:"5",
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+    },
+  }));
+
+  const BoxRegion = styled(Box)(({ theme }) => ({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: theme.spacing(),
+    [theme.breakpoints.down("md")]: {
+      // padding: theme.spacing(),
+    },
+  }));
+
+  const NavbarLogo = styled("img")(({ theme }) => ({
+    cursor: "pointer",
+    [theme.breakpoints.down("md")]: {
+    //   display: "none",
+    },
+  }));
 
   return (
-    
-       <AppBar display="flex" sx={{ backgroundColor: "white" }}>
-        <Toolbar>
-          {/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
+    < BoxRegion>
+   
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "5.5rem",
+        }}
+      >
+        <Box sx={{ display: "flex",  }}>
+        <CustomMenuIcon  sx={{marginTop:"10px"}} onClick={toggleDrawer("left", true)} />
+          <Drawer
+            anchor="left"
+            open={mobileMenu["left"]}
+            onClose={toggleDrawer("left", false)}
           >
-            <MenuIcon />
-          </IconButton> */}
-          {/* <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            {list("left")}
+          </Drawer>
+          
+          <NavbarLogo  style={{ width: 140, height: 50 }}
+               src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eventbrite_logo_2018.png" 
 
-          </Typography> */}
-            <img style={{ width: 140, height: 50 }}
-           src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eventbrite_logo_2018.png" 
-           alt="React Logo" />
+          alt="logo" />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -206,63 +229,40 @@ const Navbar = () => {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-            <Typography className={classes.title} variant="body1" noWrap>
-       Browse Event
-          </Typography>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-            <Typography className={classes.title} variant="body1"noWrap>
-            Organise
-          </Typography>
-          <ArrowDropDownIcon/>
-            </IconButton>
-            <IconButton  color="inherit">
-            <Typography className={classes.title} variant="body1" noWrap>
-            Help 
-          </Typography>
-          <ArrowDropDownIcon/>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-            
-            <Link to="/Login"><Typography className={classes.title} variant="body1" noWrap>
-         Login 
-          </Typography>
-          </Link>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-            <Typography className={classes.title} variant="body1" noWrap>
-           Sign Up
-          </Typography>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              {/* <AccountCircle />  */}
-            </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="red"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </AppBar>
-     
-   
+          
+        </Box>
+
+  
+      </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "3rem",
+        }}
+      >
+              <NavbarLinksBox>
+         
+          <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Sales </NavLink></Link>
+          <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
+          <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link>
+           
+         
+          {/* <NavLink to="/sales" variant="body2">Services</NavLink> */}
+          {/* <NavLink variant="body2">Listed</NavLink>
+          <NavLink variant="body2">Contact</NavLink> */}
+        </NavbarLinksBox>
+        <Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{          color:"red" }}variant="body2" > chimmiti@gmail.com  </NavLink></Link>
+        
+
+    
+       
+      </Box>
+    {/* </NavbarContainer> */}
+    </BoxRegion>
   );
-}
+};
+
 export default Navbar;

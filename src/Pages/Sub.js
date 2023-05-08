@@ -27,6 +27,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerInitiate } from "../redux/actions/userActions";
 import { useNavigate } from 'react-router-dom';
+
 import {
     fbSignInInitiate,
     googleSignInInitiate,
@@ -35,26 +36,10 @@ import {
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 // import { registerInitiate } from "../redux/actions";
 
-// function Copyright() {
-//   return (
-//     <Typography variant="body2" color="textSecondary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://mui.com/">
-//         Your Website
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
         height: '120vh',
-        // width :'100vh'
-
-
     },
     image: {
         backgroundImage: 'url(https://source.unsplash.com/random)',
@@ -143,13 +128,15 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Sub = () => {
-    const [state, setState] = useState({
+    const [state1, setState] = useState({
         displayName: "",
         lastName: "",
         email: "",
         password: "",
 
     });
+    const { state } = useLocation();
+    console.log('lkjhgfdsa', state);
     const { currentUser } = useSelector((state) => state.user);
     console.log("currentUser-------------------------", currentUser)
     let navigate = useNavigate();
@@ -168,7 +155,7 @@ const Sub = () => {
     // const { state } = useLocation();
 
     // const { email} = state;
-    const { email, password, displayName, lastName } = state;
+    const { email, password, displayName, lastName } = state1;
    
     const handleformSubmit = (e) => {
         e.preventDefault();
@@ -208,12 +195,6 @@ const Sub = () => {
         setState({ email: "", displayName: "", password: "", lastName: "" });
 
         return true;
-
-        
-
-
-
-
     };
     const classes = useStyles();
     //   const {register,handleSubmit}= useForm();
@@ -223,21 +204,11 @@ const Sub = () => {
     const [emailError, setEmailError] = useState("");
     const [passwordError, setpasswordError] = useState("");
 
-    //   const handleFormSubmit = ( formData)=> {
-    //  console.log ("form data is", formData)
-    //  if(!formData.error||!formData.error.length){
-    //     setError("Email is required");
-    //     // return false;
-    //  }
-    //  else{
-    //     setError("");
-    //  }
-    //  return true
-    //   }
+    
     const handleChange = (e) => {
         let { name, value } = e.target;
         console.log(state, "state")
-        setState({ ...state, [name]: value });
+        setState({ ...state1, [name]: value });
     };
 
     return (

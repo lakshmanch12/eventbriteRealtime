@@ -21,6 +21,7 @@ import List from '@mui/material/ImageList';
 import ListItem from '@mui/material/ImageListItem';
 import { Icon } from '@iconify/react';
 import { useTheme } from '@mui/material/styles';
+import FeaturedPost from './FeaturedPost';
 
 import IconButton from '@mui/material/IconButton';
 
@@ -29,6 +30,26 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 
 import Eventcontentpost from './Eventcontentpost';
+const featuredPosts = [
+  {
+    title: "Indian Designer's Haat VIZAG0. 3",
+    date: "  Indian Designer's Haat Vijaywada Thu, Apr 6, 11:00 AM'" ,
+    description:
+      'A convention center at vijyawada ap 531038.',
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4',
+
+    imageLabel: 'Image Text',
+  },
+  {
+    title: "Indian Designer's Haat VIZAG0. 3",
+    date: "  Indian Designer's Haat Vijaywada Thu, Apr 6, 11:00 AM'" ,
+    description:
+      'A convention center at vijyawada ap 531038.',
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4',
+
+    imageLabel: 'Image Text',
+  },
+];
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     // ...theme.typography.body2,
@@ -343,6 +364,7 @@ const Eventcontent = () => {
 
 </Box>
         </Card>
+       
 
       </Grid>
         </Grid>
@@ -351,148 +373,14 @@ const Eventcontent = () => {
         <Typography  variant="h2" component="div" sx={{fontSize: '25px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px" }}>
         More events from this organizer
             </Typography>
-      
-      <CardActionArea component="a" href="#"sx={{marginTop:"20px"}}>
-        <Card sx={{ display: 'flex' }}>
-          <CardContent sx={{ flex: 1 }}>
-            <Typography component="h2" variant="h6" sx={{fontWeight:'800'}}>
-              {/* {post.title} */}Indian Designer's Haat "VIZAG" 0.3
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary" sx={{fontSize: '14px',fontWeight:'800',color:'#d1410c'}}>
-              {/* {itmes.date} */}Indian Designer's Haat "Vijaywada"
-Thu, Apr 6, 11:00 AM
-
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-            {/* {itmes.address} */}Thu, Apr 6, 11:00 AM
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-            a Convention Centre • Vijayawada, AP
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-             Free
-            </Typography>
-          </CardContent>
-          <Box sx={{msFlexDirection:'column'}}>
-          <CardMedia
-            component="img"
-            sx={{ width: 260, height:110, display: { xs: 'none', sm: 'block' } }}
-            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4" 
-            alt="Live from space album cover"
-            // image={post.image}
-            // alt={post.imageLabel}
-          />
-          {/* <Avatar sx={{marginLeft:'200px',marginTop:'5px'}} >
-  <FavoriteIcon />
-</Avatar> */}
-<Stack direction="row" spacing={2} sx={{marginLeft:"140px" ,marginTop:"5px"}}>
-    <Avatar sx={{backgroundColor:"#f2f3f5"}} >
-  <FileUploadTwoToneIcon sx={{color:"black"}}  />
-</Avatar>
-<Avatar >
-  <FavoriteTwoToneIcon sx={{color:"black"}} />
-</Avatar>
-    
-    </Stack>
-
-
-</Box>
-        </Card>
-      </CardActionArea>
-      <CardActionArea component="a" href="#"sx={{marginTop:"20px"}}>
-        <Card sx={{ display: 'flex' }}>
-          <CardContent sx={{ flex: 1 }}>
-            <Typography component="h2" variant="h6" sx={{fontWeight:'800'}}>
-              {/* {post.title} */}Indian Designer's Haat "VIZAG" 0.3
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary" sx={{fontSize: '14px',fontWeight:'800',color:'#d1410c'}}>
-              {/* {itmes.date} */}Indian Designer's Haat "Vijaywada"
-Thu, Apr 6, 11:00 AM
-
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-            {/* {itmes.address} */}Thu, Apr 6, 11:00 AM
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-            a Convention Centre • Vijayawada, AP
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-             Free
-            </Typography>
-          </CardContent>
-          <Box sx={{msFlexDirection:'column'}}>
-          <CardMedia
-            component="img"
-            sx={{ width: 260, height:110, display: { xs: 'none', sm: 'block' } }}
-            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4" 
-            alt="Live from space album cover"
-            // image={post.image}
-            // alt={post.imageLabel}
-          />
-          {/* <Avatar sx={{marginLeft:'200px',marginTop:'5px'}} >
-  <FavoriteIcon />
-</Avatar> */}
-<Stack direction="row" spacing={2} sx={{marginLeft:"140px" ,marginTop:"5px"}}>
-    <Avatar sx={{backgroundColor:"#f2f3f5"}} >
-  <FileUploadTwoToneIcon sx={{color:"black"}}  />
-</Avatar>
-<Avatar >
-  <FavoriteTwoToneIcon sx={{color:"black"}} />
-</Avatar>
-    
-    </Stack>
-
-
-</Box>
-        </Card>
-      </CardActionArea>
-      <CardActionArea component="a" href="#"sx={{marginTop:"20px"}}>
-        <Card sx={{ display: 'flex' }}>
-          <CardContent sx={{ flex: 1 }}>
-            <Typography component="h2" variant="h6" sx={{fontWeight:'800'}}>
-              {/* {post.title} */}Indian Designer's Haat "VIZAG" 0.3
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary" sx={{fontSize: '14px',fontWeight:'800',color:'#d1410c'}}>
-              {/* {itmes.date} */}Indian Designer's Haat "Vijaywada"
-Thu, Apr 6, 11:00 AM
-
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-            {/* {itmes.address} */}Thu, Apr 6, 11:00 AM
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-            a Convention Centre • Vijayawada, AP
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-             Free
-            </Typography>
-          </CardContent>
-          <Box sx={{msFlexDirection:'column'}}>
-          <CardMedia
-            component="img"
-            sx={{ width: 260, height:110, display: { xs: 'none', sm: 'block' } }}
-            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4" 
-            alt="Live from space album cover"
-            // image={post.image}
-            // alt={post.imageLabel}
-          />
-          {/* <Avatar sx={{marginLeft:'200px',marginTop:'5px'}} >
-  <FavoriteIcon />
-</Avatar> */}
-<Stack direction="row" spacing={2} sx={{marginLeft:"140px" ,marginTop:"5px"}}>
-    <Avatar sx={{backgroundColor:"#f2f3f5"}} >
-  <FileUploadTwoToneIcon sx={{color:"black"}}  />
-</Avatar>
-<Avatar >
-  <FavoriteTwoToneIcon sx={{color:"black"}} />
-</Avatar>
-    
-    </Stack>
-
-
-</Box>
-        </Card>
-      </CardActionArea>
+            <Grid container spacing={5}>
+            {featuredPosts.map((post) => (
+              <FeaturedPost key={post.title} post={post} />
+            ))}
+          </Grid>
+   
+ 
+     
       </Grid>
         
         

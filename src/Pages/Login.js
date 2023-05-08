@@ -138,11 +138,11 @@ const Login = () => {
 
   let navigate = useNavigate();
 
-  useEffect(() => {
-    if (currentUser) {
-      navigate("/");
-    }
-  });
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     navigate("/");
+  //   }
+  // });
 
  
 console.log(currentUser,"currentUser////////////////////////")
@@ -169,6 +169,8 @@ console.log(currentUser,"currentUser////////////////////////")
    
   };
   const handleSubmit = (e) => {
+    debugger
+    console.log(';lkjhgfdfghjklhgffghjkl');
     e.preventDefault();
     // if (!email || !email.length){
     //   setEmailError("email is required");
@@ -196,13 +198,13 @@ console.log(currentUser,"currentUser////////////////////////")
       console.log(res.user.email,"res");  
       const user = res.user;
       const userId = user.uid
-    
+      user.isLogin = true
       
       dispatch(loginSuccess(user));
-       console.log(userId!==null,"//////////////////////////////////")
+       console.log(user,"//////////////////////////////////")
       if(userId!==null){
          
-      navigate("/",{state:user.email});
+      navigate("/",{state:{isLogin:true}});
       }
   })
   .catch((error) => dispatch(loginError(error.message)))

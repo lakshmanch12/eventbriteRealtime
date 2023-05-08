@@ -7,6 +7,7 @@ import Lakshmantwo from './Lakshmantwo';
 import Pricingtwo from './Pricingtwo';
 import Pricingthree from './Pricingthree';
 import Pricingfour from './Pricingfour';
+import Demo3 from './Demo3';
 
 import {ThemeProvider, Box,Button,Container,Typography} from "@material-ui/core";
 import theme from './Theme';
@@ -25,6 +26,7 @@ const Lakshman  = () => {
           < Lakshmanone/>
             
             <Footer/>
+         
     </div>
   )
 }

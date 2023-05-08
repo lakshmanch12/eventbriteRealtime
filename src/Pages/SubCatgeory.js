@@ -51,7 +51,7 @@ const Hero = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",
-    gap: theme.spacing(7),
+    gap: theme.spacing(2),
     marginTop: theme.spacing(10),
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
@@ -71,7 +71,7 @@ const Hero = () => {
   }));
   const Item = styled(Paper)(({ theme }) => ({
     // backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    margin: theme.spacing(10, 0, -10, 0),
+    margin: theme.spacing(2, 0, -10, 0),
     ...theme.typography.body2,
     padding: theme.spacing(1),
     // textAlign: 'center',

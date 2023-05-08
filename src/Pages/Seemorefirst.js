@@ -46,6 +46,27 @@ import Autocomplete from '@mui/material/Autocomplete';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
+import FeaturedPost from './FeaturedPost';
+const featuredPosts = [
+  {
+    title: "Indian Designer's Haat VIZAG0. 3",
+    date: "  Indian Designer's Haat Vijaywada Thu, Apr 6, 11:00 AM'" ,
+    description:
+      'A convention center at vijyawada ap 531038.',
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4',
+
+    imageLabel: 'Image Text',
+  },
+  {
+    title: "Indian Designer's Haat VIZAG0. 3",
+    date: "  Indian Designer's Haat Vijaywada Thu, Apr 6, 11:00 AM'" ,
+    description:
+      'A convention center at vijyawada ap 531038.',
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4',
+
+    imageLabel: 'Image Text',
+  },
+];
 const top100Films = [
 
    
@@ -107,7 +128,7 @@ const Seemorefirst = () =>{
     
   return (
  
-      <Grid container spacing={2} sx={{ flexGrow: 1  ,marginTop:9}}>
+      <Grid container spacing={2} sx={{ flexGrow: 1  ,marginTop:2}}>
       <Grid item  xs={12} md={3}  sm={4}
       sx={{ display: { xs: "none", sm: "block" } }}
       >
@@ -377,45 +398,50 @@ Sign in to see events
       renderInput={(params) => <TextField {...params} label="event loaction" />}
     />
       </Box>
-      <Divider variant="middle" />
-     
-      <Grid item xs={12} md={12}>
+      <Divider variant="middle" /><Grid item xs={12} md={12}>
       
       {getData.map((itmes,index)=>{	
         return(
       <CardActionArea component="a" href="#">
-        <Card sx={{ display: 'flex' }}>
-          <CardContent sx={{ flex: 1 }}>
-            <Typography component="h2" variant="h6" sx={{fontWeight:'800'}}>
-              {/* {post.title} */}Indian Designer's Haat "VIZAG" 0.3
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary" sx={{fontSize: '14px',fontWeight:'800',color:'#d1410c'}}>
-              {itmes.date}
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-            {itmes.address}
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-             Free
-            </Typography>
-          </CardContent>
-          <Box sx={{msFlexDirection:'column'}}>
-          <CardMedia
-            component="img"
-            sx={{ width: 260, height:110, display: { xs: 'none', sm: 'block' } }}
-            src={itmes.image} 
-            alt="Live from space album cover"
-            // image={post.image}
-            // alt={post.imageLabel}
-          />
-          <Avatar sx={{marginLeft:'200px',marginTop:'5px'}} >
-  <FavoriteBorderIcon />
-</Avatar>
-</Box>
-        </Card>
+       
       </CardActionArea>
         )})} 
+      
+     
+      
       </Grid>  
+      <Grid container spacing={1} sx={{marginTop:"15px"}}>
+            {getData.map((itmes,index) => (
+              <CardActionArea component="a" href="#">
+              <Card sx={{ display: 'flex' }}>
+                <CardContent sx={{ flex: 1 }}>
+                  <Typography  component="h2" variant="h6" sx={{fontWeight:'800'}}>
+                         {/* {post.title} */}Indian Designer's Haat "VIZAG" 0.3
+                  </Typography>
+                  <Typography variant="subtitle1" color="text.secondary" sx={{fontSize: '14px',fontWeight:'800',color:'#d1410c'}}>
+                  {itmes.date}
+                  </Typography>
+                  <Typography variant="subtitle1" color="text.secondary">
+                  {itmes.address}
+
+                  </Typography>
+                  <Typography variant="subtitle1" color="text.secondary">
+                  {itmes.address}
+                  </Typography>
+                  <Typography variant="subtitle1" color="primary">
+                   Free
+                  </Typography>
+                </CardContent>
+                <CardMedia
+                  component="img"
+                  sx={{ width: 280, height:130, display: { xs: 'none', sm: 'block' } }}
+                  image={itmes.image}
+                 
+                />
+              </Card>
+            </CardActionArea>
+            ))}
+          </Grid>
     
    
    
