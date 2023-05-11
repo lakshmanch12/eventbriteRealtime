@@ -14,6 +14,11 @@ import{Link} from "react-router-dom";
 // import logoImg from "../media/logo.png";
 import { Container } from "@mui/system";
 import CustomButton from "./CustomButton";
+
+import { useDispatch, useSelector } from "react-redux";
+import { logoutInitiate } from "../redux/actions/userActions";
+import { useNavigate } from 'react-router-dom';
+
 import {
   Drawer,
   List,
@@ -94,6 +99,19 @@ const useStyles = makeStyles((theme) => ({
 
  const Navbar = () => {
     const classes = useStyles();
+    const { currentUser } = useSelector((state) => state.user)
+    let navigate = useNavigate();
+    const dispatch = useDispatch();
+    const handleAuth = () => {
+    
+
+      dispatch(logoutInitiate());
+      navigate("/");
+     
+    
+      if (!currentUser) {
+      }
+    };
   const [mobileMenu, setMobileMenu] = useState({
     left: false,
   });
@@ -254,8 +272,10 @@ const useStyles = makeStyles((theme) => ({
           {/* <NavLink variant="body2">Listed</NavLink>
           <NavLink variant="body2">Contact</NavLink> */}
         </NavbarLinksBox>
-        <Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{          color:"red" }}variant="body2" > chimmiti@gmail.com  </NavLink></Link>
-        
+        <Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" > chimmiti@gmail.com  </NavLink></Link>
+        <Link  style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" onClick={handleAuth} >
+         logout </NavLink></Link>
+
 
     
        

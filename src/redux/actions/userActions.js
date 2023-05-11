@@ -36,6 +36,18 @@ const registerStart = () => ({
     type: types.LOGIN_FAIL,
     payload: error,
   });
+  const logoutStart = () => ({
+    type: types.LOGOUT_START,
+  });
+  
+  const logoutSuccess = () => ({
+    type: types.LOGOUT_SUCCESS,
+  });
+  
+  const logoutError = (error) => ({
+    type: types.LOGOUT_FAIL,
+    payload: error,
+  });
   const googleSignInStart = () => ({
     type: types.GOOGLE_SIGN_IN_START,
   });
@@ -133,5 +145,19 @@ const registerStart = () => ({
           dispatch(fbSignInSuccess(result.user));
         })
         .catch((error) => dispatch(fbSignInFail(error.message)));
+    };
+  };
+  export const logoutInitiate = () => {
+
+    return function (dispatch) {
+      dispatch(logoutStart());
+      signOut(auth).then(() => {
+        dispatch(logoutSuccess())
+      }).catch((error) => {
+        dispatch(logoutError(error.message))
+      });
+      // signOut(auth)
+      //   .then((resp) => dispatch(logoutSuccess()))
+      //   .catch((error) => dispatch(logoutError(error.message)));
     };
   };
