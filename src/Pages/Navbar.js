@@ -8,7 +8,6 @@ import jwt_decode from "jwt-decode";
 import * as React from "react";
 import { Link } from "react-router-dom";
 // import logoImg from "../media/logo.png";
-
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { logout } from "../redux/actions/userActions";
@@ -87,26 +86,30 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   }));
-
+  
  const Navbar = () => {
     const classes = useStyles();
    
     // let navigate = useNavigate();
     const dispatch = useDispatch();
-    
     const { currentUser } = useSelector((state) => state.user);
     console.log("currentUser--------------", currentUser)
     let user = ""
+    
+    debugger
     if (currentUser){
       user = jwt_decode(currentUser);
+     } else if(localStorage.getItem('email')){
+      user = {email: localStorage.getItem('email')}
      }
        console.log(user,"usermmmmm-----------------")
   
     // const tocken= useSelector ( (state)=>state.user.currentUser)
     // console.log(tocken,"tocken-----------------")
     const handleAuth = () => {
+      localStorage.clear()
       dispatch(logout());
-     localStorage.clear()
+     
     };
 
   const [mobileMenu, setMobileMenu] = useState({
@@ -268,13 +271,14 @@ const useStyles = makeStyles((theme) => ({
          
          
         </NavbarLinksBox>
-{ user ?<><Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" >
+{ localStorage.getItem('accesstoken') ?<><Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" >
         { user.email }
           
            {/* {email.split('@')[0]} */}
             </NavLink></Link>
         <Link  style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" onClick={handleAuth} >
-         logout </NavLink></Link> </> :<>
+         logout </NavLink></Link> </> 
+         :<>
 
          <Link to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2"  >
          sign in </NavLink></Link>

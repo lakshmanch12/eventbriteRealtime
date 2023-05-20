@@ -177,6 +177,7 @@ console.log(currentUser,"currentUser////////////////////////")
       console.log(res.user.accessToken, "reskjdflvkdk")
 
       localStorage.setItem("accesstoken",  res.user.accessToken)
+      localStorage.setItem("email",  res.user.email)
       let mydate=new Date()
       localStorage.setItem("expritiontime",mydate.setHours(mydate.getHours()+24));
       dispatch(loginSuccess(res.user.accessToken));
