@@ -1,35 +1,26 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import MenuIcon from "@mui/icons-material/Menu";
-import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
-import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
-import ListAltIcon from "@mui/icons-material/ListAlt";
-import HomeIcon from "@mui/icons-material/Home";
-import ContactsIcon from "@mui/icons-material/Contacts";
-import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
-import{Link} from "react-router-dom";
+import SearchIcon from '@material-ui/icons/Search';
+import MenuIcon from "@mui/icons-material/Menu";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import jwt_decode from "jwt-decode";
+import * as React from "react";
+import { Link } from "react-router-dom";
 // import logoImg from "../media/logo.png";
-import { Container } from "@mui/system";
-import CustomButton from "./CustomButton";
 
 import { useDispatch, useSelector } from "react-redux";
-import { logoutInitiate } from "../redux/actions/userActions";
 import { useNavigate } from 'react-router-dom';
+import { logout } from "../redux/actions/userActions";
 
 import {
   Drawer,
   List,
   ListItem,
   ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  styled,
+  styled
 } from "@mui/material";
 import { useState } from "react";
-import { LinkOffTwoTone } from "@mui/icons-material";
 const useStyles = makeStyles((theme) => ({
     grow: {
       flexGrow: 1,
@@ -99,19 +90,25 @@ const useStyles = makeStyles((theme) => ({
 
  const Navbar = () => {
     const classes = useStyles();
-    const { currentUser } = useSelector((state) => state.user)
-    let navigate = useNavigate();
+   
+    // let navigate = useNavigate();
     const dispatch = useDispatch();
+    
+    const { currentUser } = useSelector((state) => state.user);
+    console.log("currentUser--------------", currentUser)
+    let user = ""
+    if (currentUser){
+      user = jwt_decode(currentUser);
+     }
+       console.log(user,"usermmmmm-----------------")
+  
+    // const tocken= useSelector ( (state)=>state.user.currentUser)
+    // console.log(tocken,"tocken-----------------")
     const handleAuth = () => {
-    
-
-      dispatch(logoutInitiate());
-      navigate("/");
-     
-    
-      if (!currentUser) {
-      }
+      dispatch(logout());
+     localStorage.clear()
     };
+
   const [mobileMenu, setMobileMenu] = useState({
     left: false,
   });
@@ -261,6 +258,7 @@ const useStyles = makeStyles((theme) => ({
           gap: "3rem",
         }}
       >
+
               <NavbarLinksBox>
          
           <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Sales </NavLink></Link>
@@ -268,13 +266,22 @@ const useStyles = makeStyles((theme) => ({
           <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link>
            
          
-          {/* <NavLink to="/sales" variant="body2">Services</NavLink> */}
-          {/* <NavLink variant="body2">Listed</NavLink>
-          <NavLink variant="body2">Contact</NavLink> */}
+         
         </NavbarLinksBox>
-        <Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" > chimmiti@gmail.com  </NavLink></Link>
+{ user ?<><Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" >
+        { user.email }
+          
+           {/* {email.split('@')[0]} */}
+            </NavLink></Link>
         <Link  style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" onClick={handleAuth} >
-         logout </NavLink></Link>
+         logout </NavLink></Link> </> :<>
+
+         <Link to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2"  >
+         sign in </NavLink></Link>
+         <Link   to="/login" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2"  >
+         login </NavLink></Link>
+         </>
+         }
 
 
     

@@ -14,6 +14,7 @@ import Post from './Post';
 import { useLocation } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import Navbar from './Navbar';
+import Timer from './Timer';
 
 const Home = (props) => {
   const {state} =useLocation();
@@ -21,9 +22,11 @@ const Home = (props) => {
   console.log("state",state?.isLogin)
   return (
     <div>
+       <Timer/>
         <ThemeProvider theme={theme}>
+        <Navbar/>
             
-             {state?.isLogin ? <Navbar/> : <Header/>}
+             {/* {state?.isLogin ? <Navbar/> : <Header/>} */}
              </ThemeProvider>
              <Banner/>
             
@@ -34,15 +37,7 @@ const Home = (props) => {
             <Tablist/>
             <Post/>
             <Get/>
-            <BoxBtn/>
-            
-
-      
-   
-
-          
-
-         
+            <BoxBtn/> 
       </Container>
              <Footer/>
             

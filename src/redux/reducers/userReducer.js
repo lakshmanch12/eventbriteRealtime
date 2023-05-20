@@ -54,6 +54,7 @@ const initialState  = {
   loading: false,
   currentUser: null,
   error: null,
+  expritiontime:"",
 };
 
 const userReducer = (state = initialState, action) => {
@@ -76,6 +77,12 @@ const userReducer = (state = initialState, action) => {
         loading: false,
         currentUser: action.payload,
       };
+      case types.LOGOUT:
+        return {
+          ...state,
+          currentUser: null,
+          expritiontime:action.payload
+        };
    
     
     case types.REGISTER_FAIL:
@@ -89,6 +96,7 @@ const userReducer = (state = initialState, action) => {
         loading: false,
         error: action.payload,
       };
+    
       
     default:
       return state;

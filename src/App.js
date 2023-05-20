@@ -15,18 +15,29 @@ import Lakshman from "./Pages/Lakshman";
 import {ThemeProvider} from "@material-ui/core";
 import theme from './Pages/Theme';
 import { Routes,Route } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import {loginSuccess} from "../src/redux/actions/userActions";
 function App() {
+  const dispatch=useDispatch();
+  useEffect(()=>{
+     
+    let user = localStorage.getItem("acesstoken")
+  
+    console.log("user--------------------------",user)
+    if (user){
+      
+      dispatch(loginSuccess(user));
+     
+      console.log("user--------------------------",user)
+    }
+    console.log("user--------------------------",user)
+  },[]);
   return (
     <div className="App">
-       <ThemeProvider theme={theme}>
-              {/* <Header/> */}
-             
-             {/* <Navbar/> */}
-             </ThemeProvider>
       
-      {/* <Login/> */}
       <Routes>
-      <Route path="/" element={ <Home/> }/>
+      <Route path="/"   element={ <Home/> }/>
       <Route path="Demo"  exact element={ <Demo/> } />
       <Route path="login"  exact element={ <Login/> } />
       <Route path="register"  exact element={ <Register/> } />

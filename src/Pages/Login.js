@@ -168,10 +168,25 @@ console.log(currentUser,"currentUser////////////////////////")
     dispatch(googleSignInInitiate());
    
   };
-  const handleSubmit = (e) => {
-    debugger
-    console.log(';lkjhgfdfghjklhgffghjkl');
+
+
+  const handleSubmit = async e => {
     e.preventDefault();
+    try{ 
+      let res= await  signInWithEmailAndPassword(auth,email, password)
+      console.log(res.user.accessToken, "reskjdflvkdk")
+
+      localStorage.setItem("accesstoken",  res.user.accessToken)
+      let mydate=new Date()
+      localStorage.setItem("expritiontime",mydate.setHours(mydate.getHours()+24));
+      dispatch(loginSuccess(res.user.accessToken));
+      navigate("/");
+    }
+    catch(error){
+      console.log(error, "hdkjhvhjdv")
+
+    }
+  };
     // if (!email || !email.length){
     //   setEmailError("email is required");
      
@@ -188,31 +203,28 @@ console.log(currentUser,"currentUser////////////////////////")
     // else{
     //   setPaswordError("");
     // }
-    if (!email || !password) {
+  //   if (!email || !password) {
     
-      return;
-    }
-    dispatch(loginStart());
-    signInWithEmailAndPassword(auth,email, password)
-    .then(async (res) => {
-      console.log(res.user.email,"res");  
-      const user = res.user;
-      const userId = user.uid
-      user.isLogin = true
-      
-      dispatch(loginSuccess(user));
-       console.log(user,"//////////////////////////////////")
-      if(userId!==null){
+  //     return;
+  //   }
+  //   dispatch(loginStart());
+  //   signInWithEmailAndPassword(auth,email, password)
+  //   .then(async (res) => {
+  //     console.log(res.user.email,"res");  
+  //     const user = res.user;
+  //     const userId = user.uid
+  //     user.isLogin = true
+  //     dispatch(loginSuccess(user));
+  //      console.log(user,"//////////////////////////////////")
+  //     if(userId!==null){
          
-      navigate("/",{state:{isLogin:true}});
-      }
-  })
-  .catch((error) => dispatch(loginError(error.message)))
-    
-    // dispatch(loginInitiate(email, password));
-    setState({ email: "", password: "" });
+  //     navigate("/",{state:{isLogin:true}});
+  //     }
+  // })
+  // .catch((error) => dispatch(loginError(error.message)))
+  //   setState({ email: "", password: "" });
    
-  };
+ 
 
   const handleChange = (e) => {
     let { name, value } = e.target;
