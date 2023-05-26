@@ -66,9 +66,6 @@ const itemData = [
 ];
 
  function Get() {
-
- 
-
   return (
     <>
     
@@ -104,18 +101,8 @@ const itemData = [
             <Chip sx={{padding:'2px', fontSize:"", height:"44px",borderRadius:"24px",backgroundColor:"#fff"}} label={item.title}  variant="outlined"    /> 
         </ListItem>
       ))}
-    </List>
-
-     
-     
-    
-
-      
-    </Stack>
-   
-
-    
-      
+    </List>      
+    </Stack>  
     </Paper>
     </>
   );

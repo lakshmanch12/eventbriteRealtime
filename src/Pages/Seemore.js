@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header';
+import Navbar from './Navbar';
 import Footer from './Footer';
 import Seemorefirst from './Seemorefirst';
 import {ThemeProvider, Box,Button,Container,Typography} from "@material-ui/core";
@@ -8,7 +8,7 @@ const seemore = () => {
   return (
     <div>
          <ThemeProvider theme={theme}>
-            <Header/>
+            <Navbar/>
             </ThemeProvider>
             <Seemorefirst/>
             <Footer/>

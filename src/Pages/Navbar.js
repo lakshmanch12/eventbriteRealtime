@@ -6,11 +6,18 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import jwt_decode from "jwt-decode";
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 // import logoImg from "../media/logo.png";
+import Collapse from '@mui/material/Collapse'; 
+ 
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { logout } from "../redux/actions/userActions";
+import ListItemText from '@mui/material/ListItemText';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 import {
   Drawer,
@@ -87,16 +94,23 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
+  
+  
  const Navbar = () => {
     const classes = useStyles();
+    let tocken = localStorage.getItem('accesstoken')
+    const [open1, setOpen1] = React.useState(true);
+    const clickme = () => {
+      setOpen1(!open1);
+    };
    
-    // let navigate = useNavigate();
+    let navigate = useNavigate();
     const dispatch = useDispatch();
     const { currentUser } = useSelector((state) => state.user);
     console.log("currentUser--------------", currentUser)
     let user = ""
     
-    debugger
+  
     if (currentUser){
       user = jwt_decode(currentUser);
      } else if(localStorage.getItem('email')){
@@ -263,19 +277,29 @@ const useStyles = makeStyles((theme) => ({
       >
 
               <NavbarLinksBox>
-         
-          <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Sales </NavLink></Link>
-          <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
-          <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link>
+       {tocken?  <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Sales </NavLink></Link>
+           : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Sales </NavLink></Link> } 
+           {tocken?  <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Pricing </NavLink></Link>
+           : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Pricing </NavLink></Link> }
+           {tocken?  <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Support </NavLink></Link>
+           : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Support </NavLink></Link> } 
+          {/* <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
+           <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link> */}
            
          
          
         </NavbarLinksBox>
-{ localStorage.getItem('accesstoken') ?<><Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" >
+{tocken  ?<>
+
+ <Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" >
         { user.email }
           
            {/* {email.split('@')[0]} */}
-            </NavLink></Link>
+            </NavLink>
+            </Link>
+        
+    
+      
         <Link  style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" onClick={handleAuth} >
          logout </NavLink></Link> </> 
          :<>
@@ -285,11 +309,7 @@ const useStyles = makeStyles((theme) => ({
          <Link   to="/login" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2"  >
          login </NavLink></Link>
          </>
-         }
-
-
-    
-       
+         } 
       </Box>
     {/* </NavbarContainer> */}
     </BoxRegion>

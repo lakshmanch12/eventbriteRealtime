@@ -25,14 +25,10 @@ const Home = (props) => {
        <Timer/>
         <ThemeProvider theme={theme}>
         <Navbar/>
-            
-             {/* {state?.isLogin ? <Navbar/> : <Header/>} */}
              </ThemeProvider>
              <Banner/>
-            
              <CssBaseline />
              <Container >
-        
             <Content/>
             <Tablist/>
             <Post/>
@@ -40,7 +36,6 @@ const Home = (props) => {
             <BoxBtn/> 
       </Container>
              <Footer/>
-            
     </div>
   )
 }

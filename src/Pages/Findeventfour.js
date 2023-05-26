@@ -72,9 +72,6 @@ const itemData = [
 ];
 
  function Findeventfour() {
-
- 
-
   return (
     <>
     <Container>
@@ -86,15 +83,8 @@ const itemData = [
             Let's make it personal
             </Typography> 
             <Stack direction="row">
-      <List sx={{ width: "100%" ,height:"90%",display:"flex",spacing:'2' }}  rowHeight={90}>
-      <ListItem 
-       
-         >
-           
-                  
-        </ListItem>
-      
-          <Card sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }} >
+      <List sx={{ width: "100%" ,height:"90%",display:"flex",spacing:'2' }}  rowHeight={90}>    
+      <Card sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }} >
             <CardActionArea  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
         <Avatar 
       alt="Remy Sharp"
@@ -104,229 +94,108 @@ const itemData = [
 </Avatar>
  <CardContent sx={{ alignItems: 'center'}}>
  <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
-                  
 <Typography  sx={{color:"#1e0a3c", fontWeight:" 700",marginTop:'25px',marginBottom:'5px'}}variant="h5">
 The national Archives
 </Typography>
- 
- 
      <Button    variant="outlined"
-        sx={{
-            textTransform: 'none',
-         
-            marginBottom:'55px',
-            
-
-           
-            py: 1.2,
-            px: 5,
-          }}>
-   Follow
+        sx={{ textTransform: 'none', marginBottom:'55px',  py: 1.2,  px: 5, }}> Follow
      </Button>
        </Container>
- 
-                  
-                
               </CardContent>
             </CardActionArea>
           </Card>
-          <Card 
-        //  
-          sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }}
-          >
+          <Card   sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }}>
             <CardActionArea  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
-          
-      
         <Avatar 
       alt="Remy Sharp"
       src="/static/images/avatar/1.jpg"
       sx={{ width: 76, height: 76,
-
-       marginTop:"70px" }}
->  
-
+       marginTop:"70px" }}>  
 </Avatar>
-
-
-            <CardContent sx={{ alignItems: 'center'}}>
-               
-                    <Container 
-       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-       >
-           
+      <CardContent sx={{ alignItems: 'center'}}>
+         <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 <Typography  sx={{color:"#1e0a3c", fontWeight:" 700",marginTop:'25px',marginBottom:'5px'}}variant="h5">
 The national Archives
 </Typography>
- 
  </Container>
-                    <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+   <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
      <Button    variant="outlined"
-        sx={{
-            textTransform: 'none',
-         
-            marginBottom:'55px',
-            
-
-           
-            py: 1.2,
-            px: 5,
-          }}>
-   Follow
-     </Button>
-       </Container>
- 
-                  
-                
+        sx={{textTransform: 'none', marginBottom:'55px', py: 1.2,  px: 5,}}> Follow   </Button>
+       </Container>   
               </CardContent>
             </CardActionArea>
           </Card>
-          <Card 
-        //  
-          sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }}
-          >
+          <Card sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }} >
             <CardActionArea  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
-          
-      
         <Avatar 
       alt="Remy Sharp"
       src="/static/images/avatar/1.jpg"
       sx={{ width: 76, height: 76,
-
        marginTop:"70px" }}
 >  
-
 </Avatar>
-
-
             <CardContent sx={{ alignItems: 'center'}}>
                
-                    <Container 
-       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-       >
-           
+                    <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >     
 <Typography  sx={{color:"#1e0a3c", fontWeight:" 700",marginTop:'25px',marginBottom:'5px'}}variant="h5">
 The national Archives
 </Typography>
- 
  </Container>
-                    <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
-     <Button    variant="outlined"
-        sx={{
-            textTransform: 'none',
-         
-            marginBottom:'55px',
-            
-
-           
-            py: 1.2,
-            px: 5,
-          }}>
+  <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+     <Button    variant="outlined"    sx={{  textTransform: 'none', marginBottom:'55px',py: 1.2,  px: 5, }}>
    Follow
      </Button>
        </Container>
- 
-                  
-                
               </CardContent>
             </CardActionArea>
           </Card>
-          <Card 
-        //  
-          sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }}
-          >
+          <Card   sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }} >
             <CardActionArea  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
-          
-      
         <Avatar 
       alt="Remy Sharp"
       src="/static/images/avatar/1.jpg"
       sx={{ width: 76, height: 76,
-
        marginTop:"70px" }}
 >  
-
 </Avatar>
-
-
             <CardContent sx={{ alignItems: 'center'}}>
-               
                     <Container 
        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
        >
-           
 <Typography  sx={{color:"#1e0a3c", fontWeight:" 700",marginTop:'25px',marginBottom:'5px'}}variant="h5">
 The national Archives
 </Typography>
- 
  </Container>
                     <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
      <Button    variant="outlined"
-        sx={{
-            textTransform: 'none',
-         
-            marginBottom:'55px',
-            
-
-           
-            py: 1.2,
-            px: 5,
-          }}>
+        sx={{ textTransform: 'none',  marginBottom:'55px', py: 1.2, px: 5, }}>
    Follow
      </Button>
-       </Container>
- 
-                  
-                
+       </Container> 
               </CardContent>
             </CardActionArea>
           </Card>
-          <Card 
-        //  
-          sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }}
-          >
+          <Card sx={{ maxWidth: "240px", maxHeight:"200",  m: 2.5 }} >
             <CardActionArea  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
-          
-      
         <Avatar 
       alt="Remy Sharp"
       src="/static/images/avatar/1.jpg"
       sx={{ width: 76, height: 76,
-
        marginTop:"70px" }}
 >  
-
 </Avatar>
-
-
             <CardContent sx={{ alignItems: 'center'}}>
-               
-                    <Container 
-       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-       >
-           
+                    <Container   sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> 
 <Typography  sx={{color:"#1e0a3c", fontWeight:" 700",marginTop:'25px',marginBottom:'5px'}}variant="h5">
 The national Archives
 </Typography>
- 
  </Container>
-                    <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+  <Container  sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
      <Button    variant="outlined"
-        sx={{
-            textTransform: 'none',
-         
-            marginBottom:'55px',
-            
-
-           
-            py: 1.2,
-            px: 5,
-          }}>
+        sx={{textTransform: 'none',marginBottom:'55px',  py: 1.2,  px: 5,  }}>
    Follow
      </Button>
        </Container>
- 
-                  
-                
               </CardContent>
             </CardActionArea>
           </Card>

@@ -21,15 +21,10 @@ import Chip from '@mui/material/Chip';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import Container from '@mui/material/Container';
-
-
-
 import TagFacesIcon from '@mui/icons-material/TagFaces';
 import List from '@mui/material/ImageList';
 import ListItem from '@mui/material/ImageListItem';
-
 const SizedAvatar = styled(Avatar)`
   ${({ size, theme }) => `
     width: ${theme.spacing(size)}px; 
@@ -38,7 +33,6 @@ const SizedAvatar = styled(Avatar)`
 `;
 
 const itemData = [
-
   {
 
     title: 'Tomato basil',
@@ -57,9 +51,6 @@ const itemData = [
 
 
 ];
-
-
-
 const Findeventfive = (children) => {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);

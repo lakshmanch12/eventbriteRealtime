@@ -27,7 +27,7 @@ import {  Link } from "react-router-dom";
 
 const Eventcontentpost = () => {
     const homepagedata = useSelector((state) => state.homepagedata.data?.data);
-	console.log('homepagedata',homepagedata);
+	// console.log('homepagedata',homepagedata);
 
 	const dispatch = useDispatch();
 
@@ -41,7 +41,7 @@ const Eventcontentpost = () => {
 	  for (let key in homepagedata) {
 		getData.push({ id: key, ...homepagedata[key]});
 	}
-	console.log('getData',getData);
+	// console.log('getData',getData);
   return (
  
     < Box sx={{backgroundColor:"#eeedf2"}} >

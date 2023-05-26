@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Navbar from './Navbar';
 import Footer from './Footer';
 import Eventcontent from './Eventcontent';
 import Pricingone from './Pricingone';
@@ -13,21 +13,14 @@ import Salesthree from './Salesthree';
 import Salesfour from './Salesfour';
 import Salesfive from './Salesfive';
 import Salesvedio from './Salesvedio';
-
 import Banner from './Banner';
-
 import {ThemeProvider, Box,Button,Container,Typography} from "@material-ui/core";
 import theme from './Theme';
-import Grid from '@mui/material/Grid';
-
-
-
 const Pricing  = () => {
   return (
     <div>
          <ThemeProvider theme={theme}>
-            
-            <Header/>
+            <Navbar/>
             </ThemeProvider>
             < Salesvedio/>
             < Salesfive/>
@@ -39,9 +32,6 @@ const Pricing  = () => {
            <Salesthree/>
            <Salesfour/>
            <Banner/>
-         
-       
-            
             <Footer/>
     </div>
   )

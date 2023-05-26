@@ -1,13 +1,5 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import React from "react";
-import Salessix from './Salessix';
-import Salesseven from './Salesseven';
-import videoBg from '../assets/videoBg.mp4'
-
-
-
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import CustomButton from "./CustomButton";
 
 const Lakshmantwo = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -69,17 +61,6 @@ const Lakshmantwo = () => {
       >
 Eventbrite Developer
       </Typography>
-
-   
-      
-    
-     
-
-    
-
-      
-   
-    
     </Box>
   );
 };

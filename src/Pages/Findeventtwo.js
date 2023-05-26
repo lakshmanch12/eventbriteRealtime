@@ -11,10 +11,7 @@ import {
   Grid,
   Button
 } from "@mui/material";
-// import { database,dbRef } from '../firebase';
 import { useState ,useEffect } from "react";
-// import {Card,Button} from 'react-bootstrap';
-// import { useNavigate } from "react-router-dom";
 import { useSelector,useDispatch } from "react-redux";
 import {getHomePageInitiate} from '../redux/actions/homepageActions';
 import {homePageApi} from '../redux/api/homepageApi';

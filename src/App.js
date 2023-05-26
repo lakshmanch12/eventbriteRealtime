@@ -16,7 +16,7 @@ import {ThemeProvider} from "@material-ui/core";
 import theme from './Pages/Theme';
 import { Routes,Route } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect ,Navigate} from "react";
 import {loginSuccess} from "../src/redux/actions/userActions";
 function App() {
   const dispatch=useDispatch();
@@ -33,6 +33,7 @@ function App() {
     }
     console.log("user--------------------------",user)
   },[]);
+ 
   return (
     <div className="App">
       
@@ -50,6 +51,8 @@ function App() {
       <Route path="Sales"  exact element={ <Sales/> } />
       <Route path="lakshman"  exact element={ <Lakshman/> } />
       </Routes>
+   
+      
     </div>
   );
 }

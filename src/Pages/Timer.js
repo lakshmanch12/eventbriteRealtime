@@ -4,10 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logout } from '../redux/actions/userActions';
 
-
-
-
-
 function Timer() {
     const dispatch = useDispatch()
 const navigate = useNavigate()

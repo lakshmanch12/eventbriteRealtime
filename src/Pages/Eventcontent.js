@@ -86,137 +86,15 @@ const Eventcontent = () => {
     <Box sx={{ my: 5, mx: -1 , backgroundColor:"#eeedf2"}}>
         <Grid container alignItems="center">
           <Grid item xs > 
-            
             <Typography gutterBottom variant="body2" component="div" sx={{fontSize: '14px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px"}}>
             By fayre media
             </Typography>
           </Grid>
           <Grid item>
-            
           <Button variant="contained" sx={{marginTop:"20px",marginBottom:"20px",marginRight:"10px"}}>Follow</Button>
           </Grid>
         </Grid>
-        
-        
       </Box>
-      
-    {/* <Box sx={{ my: 5, mx: -1 }}>
-    <Typography  variant="h2" component="div" sx={{fontSize: '25px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px"}}>
-    When and where
-            </Typography>
-        <Grid container alignItems="center" >
-        <Grid item xs={2} sm={4} md={4} >
-                
-               
-                <Stack direction="row"textDecoration= 'none' spacing={0}>
-            
-         
-            <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          width: 'fit-content',
-          // border: (theme) => `1px solid ${theme.palette.divider}`,
-         
-          bgcolor: 'background.paper',
-          color: 'text.secondary',
-          '& svg': {
-            m: 1.5,
-          },
-          '& hr': {
-            mx: 0.5,
-          },
-        }}
-      >
-        <Box sx={{
-            width: 70,
-            height: 40,
-            backgroundColor: '#eeedf2',
-            textAlign: 'center',
-         marginLeft:"10px",
-         borderRadius: 4,
-            py: 2.2,
-          }}
-        >
-            < EventIcon sx={{color:"blue"}} />
-            </Box>
-        <Box
-          sx={{
-            width: 210,
-            height: 70,
-            // py: 4.2,
-           
-            paddingLeft:'16px'
-          
-          }}
-        >
-           <Typography component="body2"
-           sx={{ alignItems:'center' , my:'4', color:'black',textDecoration: 'none' }}
-    variant="body2"   >
-      Date and time
-              </Typography>
-              <Typography component="body2"
-           sx={{ alignItems:'center' , my:'4', color:'black',textDecoration: 'none' }}
-    variant="body2"   >
-   April 4 · 11am - April 5 · 8pm IST
-              </Typography>
-              
-      
-    
-            </Box>
-       
-        <Divider orientation="vertical" flexItem />
-        <Box sx={{
-            width: 70,
-            height: 40,
-            backgroundColor: '#eeedf2',
-            textAlign: 'center',
-            marginLeft:"10px",
-            borderRadius: 4,
-         
-            py: 2.2,
-          }}
-        >
-            < PlaceOutlinedIcon sx={{color:"blue"}} />
-            </Box>
-        <Box
-          sx={{
-            width: 210,
-            height: 70,
-            py: 2.2,
-            // backgroundColor: '#f8f7fa',
-            paddingLeft:'16px'
-          
-          }}
-        >
-           <Typography component="body2"
-           sx={{ alignItems:'center' , my:'4', color:'black',textDecoration: 'none' }}
-    variant="body2"   >
-     Loaction
-              </Typography>
-              <Typography component="body2"
-           sx={{ alignItems:'center' , my:'4', color:'black',textDecoration: 'none' }}
-    variant="body2"   >
-   Novotel Visakhapatnam Varun Beach Doctor NTR Beach Road Visakhapatnam, AP 530002
-              </Typography>
-              
-      
-    
-            </Box>
-      </Box>
-            
-           
-          </Stack>
-
-
-        
-              </Grid>
-          <Grid item>
-          </Grid>
-        </Grid>
-        
-        
-      </Box> */}
       <Box >
     <Typography  variant="h2" component="div" sx={{fontSize: '25px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px"}}>
     About this event
@@ -280,45 +158,27 @@ const Eventcontent = () => {
       <Chip label="   #upcomingexhibition" />
       </Stack>
     </Stack>
-
-
-          
             <Stack direction="row"textDecoration= 'none' spacing={0}>
           </Stack>
               </Grid>
           <Grid item>
           </Grid>
         </Grid>
-        
-        
       </Box>
       <Box >
-     
-    
         <Grid container alignItems="center" sx={{marginTop:"30px"}}>
         <Typography  variant="h2" component="div" sx={{fontSize: '25px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px" }}>
     Share with friends
             </Typography>
-        <Grid item xs={2} sm={4} md={12} >
-                
-               
+        <Grid item xs={2} sm={4} md={12} >   
         <Stack direction="row" spacing={2} sx={{marginTop:"10px",marginLeft:"10px"}}>
-         
-
-  
         <Icon icon="gg:facebook" width="25" height="25" />
         <Icon icon="fe:messanger" width="25" height="25"  />
         <Icon icon="basil:linkedin-solid"width="25" height="25"  />
         <Icon icon="mdi:twitter" width="25" height="25"  />
         <Icon icon="ic:twotone-email" width="25" height="25"  />
- 
-     
     </Stack>
-
-
-        
               </Grid>
-              
               <Grid item xs={12} md={12}sx={{marginTop:"40px", alignItems:"center"}}>
               <Typography  variant="h2" component="div" sx={{fontSize: '25px',
                 fontWeight:'800',
@@ -339,36 +199,17 @@ const Eventcontent = () => {
  from organizers you follow
 </Typography>
 <Stack direction="row" spacing={2}
-//  sx={{marginLeft:"120px" ,marginTop:"5px"}}
  >
-{/* <Button variant="contained" sx={{marginTop:"20px",marginBottom:"20px",marginRight:"10px"}}>Follow</Button> */}
-
-   
 <Button variant="contained" sx={{marginTop:"20px",marginBottom:"20px",marginRight:"10px"}}>Follow</Button>
-
-    
     </Stack>
             </Container>
                 </Paper>
-              
-   
-     
-     
         <Card sx={{ display: 'flex' }}>
-          
           <Box sx={{msFlexDirection:'column'}}>
-        
-         
-
-
-
 </Box>
-        </Card>
-       
-
+ </Card>
       </Grid>
         </Grid>
-      
         <Grid item xs={12} md={12}sx={{marginTop:"40px"}}>
         <Typography  variant="h2" component="div" sx={{fontSize: '25px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px" }}>
         More events from this organizer
@@ -378,17 +219,9 @@ const Eventcontent = () => {
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
-   
- 
-     
       </Grid>
-        
-        
       </Box>
-
-
   </Item>
-  
 </Grid>
 <Grid item xs={12} md={4} sm={4}  
 sx={{ display: { xs: "none", sm: "block", md:"block"}}}
@@ -400,20 +233,14 @@ sx={{ display: { xs: "none", sm: "block", md:"block"}}}
             <Typography  variant="h6" component="div" sx={{fontSize: '18px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px"}}>
             General Admission
             </Typography>
-            
           </Grid>
           <Grid item>
-            
           <Button variant="contained" sx={{marginTop:"20px",marginBottom:"20px",marginRight:"10px"}}>Follow</Button>
           </Grid>
         </Grid>
         <Typography  variant="h6" component="div" sx={{fontSize: '14px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px"}}>
           free
             </Typography>
-            
-
-
-     
     </Box>
     <Button
         sx={{

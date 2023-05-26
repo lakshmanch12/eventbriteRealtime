@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Navbar from './Navbar';
 import Footer from './Footer';
 import SubCatgeory from './SubCatgeory';
 import {ThemeProvider, Box,Button,Container,Typography} from "@material-ui/core";
@@ -15,7 +15,7 @@ const catgeory = () => {
    
     <div>
       <ThemeProvider theme={theme}>
-            <Header/>
+            <Navbar/>
             </ThemeProvider>
             <SubCatgeory/>
          

@@ -116,7 +116,6 @@ const Item = styled(Paper)(({ theme }) => ({
         py: 2.2,
         backgroundColor: '#f8f7fa',
         paddingLeft:'16px'
-      
       }}
     >
        <Typography component="body2"
@@ -126,12 +125,8 @@ const Item = styled(Paper)(({ theme }) => ({
 variant="body2"   >
     Music
           </Typography>
-
         </Box>
-        
-       
       </Stack>
-
             </Link>
           
           </Grid>
@@ -202,17 +197,12 @@ variant="body2"   >
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
-
-  
-        // border:'1px solid black',
         '&:hover': {
-          
           opacity: [0.9, 0.8, 0.7],
         },
       }}
     >
         < CollectionsOutlinedIcon sx={{color:"red"}} />
-
         </Box>
         <Box
       sx={{
@@ -231,15 +221,9 @@ variant="body2"   >
           variant="body2"    >
   Holiday
           </Typography>
-
         </Box>
-        
-       
       </Stack>
-
             </Link>
-    
-
           </Grid>
           <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory"style={{ textDecoration: 'none' }} >
@@ -273,16 +257,9 @@ variant="body2"   >
           variant="body2"    >
   Health
           </Typography>
-
         </Box>
-        
-       
       </Stack>
-
             </Link>
-          
-       
-           
           </Grid>
           <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
@@ -321,16 +298,10 @@ variant="body2"   >
           variant="body2"    >
   hobbies
           </Typography>
-
         </Box>
-        
-       
       </Stack>
-
             </Link>
-       
           </Grid>
-          
           <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
             <Stack direction="row" spacing={0}>
@@ -341,17 +312,12 @@ variant="body2"   >
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
-
-  
-        // border:'1px solid black',
         '&:hover': {
-          
           opacity: [0.9, 0.8, 0.7],
         },
       }}
     >
         < BusinessCenterOutlinedIcon sx={{color:"red"}} />
-
         </Box>
         <Box
       sx={{
@@ -359,10 +325,7 @@ variant="body2"   >
         height: 70,
         py: 2.2,
       paddingLeft:'16px',
-     
-       
         backgroundColor: '#f8f7fa',
-      
       }}
     >
        <Typography component="body2"
@@ -372,14 +335,9 @@ variant="body2"   >
           variant="body2"    >
   Bussienses
           </Typography>
-
         </Box>
-        
-       
       </Stack>
-
             </Link>
-    
           </Grid>
           <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }} >
@@ -406,36 +364,22 @@ variant="body2"   >
       }}
     >
        <Typography component="body2"
-       sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',
-    
-}}
-          variant="body2"    >
-Food&Drink
-          </Typography>
-
+       sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',}}
+          variant="body2"    >Food&Drink</Typography>
         </Box>
-        
-       
       </Stack>
-
             </Link>
-   
           </Grid>
           <Grid item xs={12} sm={4} md={4} >
           <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
             <Stack direction="row" spacing={0}>
-            <Box
-      sx={{
+            <Box sx={{
         width: 80,
         height: 70,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
-
-  
-        // border:'1px solid black',
         '&:hover': {
-          
           opacity: [0.9, 0.8, 0.7],
         },
       }}
@@ -457,19 +401,11 @@ Food&Drink
        sx={{ alignItems:'center' , my:'4', color:'black',textDecoration: 'none',
     
 }}
-          variant="body2"    >
- Sports&Fitness
-          </Typography>
-
+          variant="body2">
+ Sports&Fitness </Typography>
         </Box>
-        
-       
       </Stack>
-
             </Link>
-   
-
-           
           </Grid>
       </Grid>
     </Box>
