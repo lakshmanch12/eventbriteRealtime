@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
+import Footer from './Footer';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
@@ -26,6 +26,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
 import { auth, } from "../firebase";
 import "../index.css"
+import Container from '@mui/material/Container';
 
 
 import {
@@ -37,6 +38,7 @@ import {
 
 } from "../redux/actions/userActions";
 import {useForm} from 'react-hook-form';
+
 
 
 
@@ -58,13 +60,13 @@ const useStyles = makeStyles((theme) => ({
   },
  
   textfield :{
-    margin: theme.spacing(6, 0, 2),
+    margin: theme.spacing(4, 0, 2),
   },
   textfield1 :{
     margin: theme.spacing(-1, 0, 2),
   },
   paper: {
-    margin: theme.spacing(1, 25),
+    margin: theme.spacing(0, 9),
     display: 'flex',
     flexDirection: 'column',
     // alignItems: 'center',
@@ -135,41 +137,17 @@ const Login = () => {
   const { email, password } = state;
 
   const { currentUser } = useSelector((state) => state.user);
-
   let navigate = useNavigate();
-
-  // useEffect(() => {
-  //   if (currentUser) {
-  //     navigate("/");
-  //   }
-  // });
-
- 
 console.log(currentUser,"currentUser////////////////////////")
-
-
-
-
-
-
-  // const {register,handleSubmit}= useForm();
-
   const [emailError,setEmailError]= useState("");
   const [passwordError,setPaswordError]= useState("");
-
   const classes = useStyles();
-
   const dispatch = useDispatch();
   // const dispatch = useDispatch();
-  
-  
   const handleGoogleSignIn = () => {
     alert("hello")
     dispatch(googleSignInInitiate());
-   
   };
-
-
   const handleSubmit = async e => {
     e.preventDefault();
     try{ 
@@ -231,9 +209,10 @@ console.log(currentUser,"currentUser////////////////////////")
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
-  const matches = useMediaQuery('(max-width:600px)');
+  const matches = useMediaQuery('(max-width:375px)');
 
   return (
+    <>
     <ThemeProvider theme={theme}>
       <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -241,12 +220,13 @@ console.log(currentUser,"currentUser////////////////////////")
       <Grid item 
       // xs={12} 
       sm={12} 
-      md={12} 
+      md={6} 
        lg={6}
-      sx={{ width: matches === false ? '50vw' : '90vw' }}
+      // sx={{ width: matches === true ? '150vw' : '190vw' }}
       component={Paper} 
       elevation={6} 
        square>
+        <Container maxWidth="sm">
         <div 
         className={classes.paper}
         >
@@ -280,7 +260,6 @@ console.log(currentUser,"currentUser////////////////////////")
              helperText={emailError}
               autoComplete="email"
               autoFocus
-             
             />
             <TextField 
             className={classes.textfield1}
@@ -398,13 +377,17 @@ console.log(currentUser,"currentUser////////////////////////")
             </Box>
           </form>
         </div>
+        </Container>
       </Grid>
       <Grid item xs={4} sm={4} md={6} 
       className={classes.image}
        />
     </Grid>
+    
   
    </ThemeProvider>
+    <Footer/>
+    </>
     
   );
 }

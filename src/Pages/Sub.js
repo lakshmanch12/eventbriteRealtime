@@ -7,8 +7,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-
+import Container from '@mui/material/Container';
 import { getDatabase, ref, set } from "firebase/database";
+import Footer from './Footer';
 
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
@@ -61,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(-1, 0, 2),
     },
     paper: {
-        margin: theme.spacing(5, 25),
+        margin: theme.spacing(0, 9),
         display: 'flex',
         flexDirection: 'column',
         // alignItems: 'center',
@@ -212,6 +213,7 @@ const Sub = () => {
     };
 
     return (
+        <>
         <ThemeProvider theme={theme}>
             <Grid container component="main" className={classes.root}>
                 <CssBaseline />
@@ -219,13 +221,13 @@ const Sub = () => {
                      <Grid item 
                     //  xs={12} sm={8} md={6} 
                     sm={12} 
-                    md={7} 
-                     lg={6}
+      md={6} 
+       lg={6}
                      component={Paper} elevation={6} square>
+                         <Container maxWidth="sm">
                     <div className={classes.paper}>
-                        {/* <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar> */}
+                   
+                     
                         <img style={{ width: 140, height: 50 }}
                             src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eventbrite_logo_2018.png"
                             alt="React Logo" />
@@ -373,18 +375,18 @@ const Sub = () => {
                             </Box>
                         </form>
                     </div>
+                    </Container>
                 </Grid>
                 <Grid item 
                 // xs={4} sm={4} md={6}
-                xs={false}
-                sm={4}
-                md={5}
+                xs={4} sm={4} md={6} 
                     className={classes.image}
                 />
             </Grid>
 
         </ThemeProvider>
-
+        <Footer/>
+</>
     );
 }
 export default Sub;

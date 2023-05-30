@@ -23,26 +23,13 @@ import  {  useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerInitiate } from "../redux/actions/userActions";
 import { useNavigate } from 'react-router-dom';
+import Container from '@mui/material/Container';
 import {
   fbSignInInitiate,
   googleSignInInitiate,
   loginInitiate,
 } from "../redux/actions/userActions";
-
-// function Copyright() {
-//   return (
-//     <Typography variant="body2" color="textSecondary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://mui.com/">
-//         Your Website
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
-
+import Footer from './Footer';
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '120vh',
@@ -50,12 +37,13 @@ const useStyles = makeStyles((theme) => ({
     
   },
   image: {
-    backgroundImage: 'url(https://cdn.evbstatic.com/s3-build/perm_001/c24baa/django/images/login/lateral-image-3.jpg)',
+    backgroundImage: 'url(https://cdn.evbstatic.com/s3-build/perm_001/1bab52/django/images/login/lateral-image-1.jpg)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[1000],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    width: '100%',
   },
   rooot: {
     width: '100%',
@@ -69,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(-1, 0, 2),
   },
   paper: {
-    margin: theme.spacing(1, 25),
+    margin: theme.spacing(4, 7),
     display: 'flex',
     flexDirection: 'column',
     // alignItems: 'center',
@@ -118,13 +106,14 @@ const useStyles = makeStyles((theme) => ({
   },
   chip:{
     margin: theme.spacing(2.7, 0, 1), 
+    display: 'flex',
   },
   divider:{
     margin: theme.spacing(4.5, 0, 1), 
-    
+    display: 'flex',
     flexDirection: 'row',
-    width: '50%',
-    maxWidth: 163,
+    width: '60%',
+    maxWidth: 200,
   }
 }));
 
@@ -187,6 +176,7 @@ const Register = () => {
 //   }
 
   return ( 
+    <>
     <ThemeProvider theme={theme}>
       <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -200,6 +190,7 @@ const Register = () => {
       component={Paper} 
       // elevation={2}
        square>
+        <Container maxWidth="sm">
         <div className={classes.paper}>
           {/* <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
@@ -239,16 +230,19 @@ const Register = () => {
             >
           continue
             </Button>
+
+
           
          <Box   className={classes.box}>
-         <Divider  
+        
+         {/* <Divider  
          className={classes.divider}
          />
       <Chip variant="outlined" className={classes.chip} size="large" label="or" />
 
       <Divider  
          className={classes.divider}
-         />
+         /> */}
                 
 
          </Box>
@@ -307,6 +301,7 @@ const Register = () => {
             </Box>
           </form>
         </div>
+        </Container>
       </Grid>
       <Grid item xs={4} sm={4} md={5} 
       className={classes.image}
@@ -314,6 +309,8 @@ const Register = () => {
     </Grid>
   
    </ThemeProvider>
+     <Footer/>
+     </>
     
   );
 }

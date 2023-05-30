@@ -16,9 +16,7 @@ import { logout } from "../redux/actions/userActions";
 import ListItemText from '@mui/material/ListItemText';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-
 import {
   Drawer,
   List,
@@ -149,24 +147,22 @@ const useStyles = makeStyles((theme) => ({
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {/* {["sales", "pricing", "support team",].map(
-          (text, index) => ( */}
             <ListItem  disablePadding>
               <ListItemButton>
-              <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Sales </NavLink></Link>
-                {/* <ListItemText primary="sales" /> */}
+              {tocken?  <Link to="/sales" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Sales </NavLink></Link>
+           : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Sales </NavLink></Link> } 
               </ListItemButton>
             </ListItem>
             <ListItem  disablePadding>
               <ListItemButton>
-              <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
-
+              {tocken?  <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Pricing </NavLink></Link>
+           : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Pricing </NavLink></Link> } 
               </ListItemButton>
             </ListItem>
             <ListItem  disablePadding>
               <ListItemButton>
-              <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link>
-
+              {tocken?  <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Support </NavLink></Link>
+           : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Support </NavLink></Link> } 
               </ListItemButton>
             </ListItem>
           {/* ) */}
@@ -283,8 +279,7 @@ const useStyles = makeStyles((theme) => ({
            : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Pricing </NavLink></Link> }
            {tocken?  <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Support </NavLink></Link>
            : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Support </NavLink></Link> } 
-          {/* <Link to="/pricing" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Pricing </NavLink></Link>
-           <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink variant="body2" >Support  </NavLink></Link> */}
+        
            
          
          

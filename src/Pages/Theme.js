@@ -9,7 +9,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#ffebe",
+      main: "#d1410c",
     },
     secondary: {
       main: '#d1410c',
@@ -18,7 +18,7 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600,
+      sm: 400,
       md: 960,
       lg: 1280,
       xl: 1920,
