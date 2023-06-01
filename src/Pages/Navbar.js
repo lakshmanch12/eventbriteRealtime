@@ -146,6 +146,10 @@ const useStyles = makeStyles((theme) => ({
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+       <NavbarLogo  style={{ width: 140, height: 50 }}
+               src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eventbrite_logo_2018.png" 
+
+          alt="logo" />
       <List>
             <ListItem  disablePadding>
               <ListItemButton>
@@ -185,7 +189,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    gap: theme.spacing(5),
+    gap: theme.spacing(4),
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
@@ -221,13 +225,12 @@ const useStyles = makeStyles((theme) => ({
 
   return (
     < BoxRegion>
-   
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: "5.5rem",
+          gap: "2.5rem",
         }}
       >
         <Box sx={{ display: "flex",  }}>
@@ -262,13 +265,12 @@ const useStyles = makeStyles((theme) => ({
 
   
       </Box>
-
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: "3rem",
+          gap: "2rem",
         }}
       >
 
@@ -279,17 +281,13 @@ const useStyles = makeStyles((theme) => ({
            : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Pricing </NavLink></Link> }
            {tocken?  <Link to="/lakshman" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Support </NavLink></Link>
            : <Link to="/login" style={{ textDecoration: 'none' }}><NavLink  variant="body1" noWrap >Support </NavLink></Link> } 
-        
-           
-         
-         
         </NavbarLinksBox>
 {tocken  ?<>
 
  <Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" >
-        { user.email }
+        {/* { user.email } */}
           
-           {/* {email.split('@')[0]} */}
+           { user.email.split('@')[0]}
             </NavLink>
             </Link>
         
@@ -300,13 +298,12 @@ const useStyles = makeStyles((theme) => ({
          :<>
 
          <Link to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2"  >
-         sign in </NavLink></Link>
+         signIn </NavLink></Link>
          <Link   to="/login" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2"  >
          login </NavLink></Link>
          </>
          } 
       </Box>
-    {/* </NavbarContainer> */}
     </BoxRegion>
   );
 };

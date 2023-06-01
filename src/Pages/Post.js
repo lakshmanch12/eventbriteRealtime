@@ -44,7 +44,7 @@ const Post = () => {
   return (
     // <Layout>
     <>
-    <Typography variant="h1"  sx={{ fontSize: "1.5rem", lineHeight: "2rem",fontWeight:"700",letterSpacing:"0.25px"}}>
+    <Typography variant="h1"  sx={{ fontSize: "1.5rem", lineHeight: "2rem",fontWeight:"700",letterSpacing:"0.25px",m: 2}}>
     Events in Vishākhapatnam
              {/* {menu.description} */}
              </Typography>

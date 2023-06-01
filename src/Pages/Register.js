@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(-1, 0, 2),
   },
   paper: {
-    margin: theme.spacing(4, 7),
+    margin: theme.spacing(4, 6),
     display: 'flex',
     flexDirection: 'column',
     // alignItems: 'center',
@@ -180,7 +180,6 @@ const Register = () => {
     <ThemeProvider theme={theme}>
       <Grid container component="main" className={classes.root}>
       <CssBaseline />
-    
       <Grid 
       item 
       // xs={12} sm={12} md={6} 
@@ -198,18 +197,16 @@ const Register = () => {
           <img style={{ width: 140, height: 50 }}
            src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eventbrite_logo_2018.png" 
            alt="React Logo" />
-
           <Typography component="h1"   className={classes.login}
-          variant="h3"
-          >
-        Create  an account
-          </Typography>
+          variant="h3" >Create  an  </Typography>
+          <Typography component="h1"   className={classes.login}
+          variant="h3" >account </Typography>
           <form className={classes.form} onSubmit={handleSubmit(handleformSubmit)} noValidate>
             <TextField  className={classes.textfield}
            error={emailError && emailError.length ? true : false}
               variant="outlined"
               margin="normal"
-              // required
+          
               fullWidth
               id="email"
               label="Email Address"
@@ -226,15 +223,10 @@ const Register = () => {
               color="secondary"
               size="large"
               className={classes.submit}
-              onClick={handleformSubmit }
-            >
+              onClick={handleformSubmit } >
           continue
             </Button>
-
-
-          
          <Box   className={classes.box}>
-        
          {/* <Divider  
          className={classes.divider}
          />
@@ -243,10 +235,7 @@ const Register = () => {
       <Divider  
          className={classes.divider}
          /> */}
-                
-
-         </Box>
-                
+         </Box>   
             <Button
               type="submit"
               fullWidth
@@ -254,46 +243,31 @@ const Register = () => {
               // color="secondary"
               size="large"
               className={classes.googlebtn}
-              onClick={handleGoogleSignIn}
-            >
+              onClick={handleGoogleSignIn} >
                <img
                style={{ width: 45, height: 25 }}
                 src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg"
-                alt=""
-               
-              />
-               Sign in with gmail
+                alt=""/>Sign in with gmail
             </Button>
             <Grid container>
               <Grid item xs className={classes.other} >
-                <Link  
-                variant="h6"
-                >
+                <Link   variant="h6" >
                  Other login mehods
                 </Link>
               </Grid>
-           
             </Grid>
             <Grid container>
               <Grid item  className={classes.icons} >
-                {/* <Link href="#" variant="body2">
-                  Forgot password?
-                </Link> */}
+                
                 <Avatar alt="Remy Sharp" 
                 src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/1200px-Facebook_f_logo_%282021%29.svg.png" 
                 onClick={handleFBSignIn}/>
               </Grid>
               <Grid item className={classes.icons}>
-              {/* <Avatar alt="Remy Sharp" src="https://1000logos.net/wp-content/uploads/2016/10/apple-emblem.jpg" /> */}
-
-                {/* <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link> */}
               </Grid>
             </Grid>
             <Box className={classes.signup} >
-            <Link  to="/Login" 
-                variant="h6"
+            <Link  to="/Login"  variant="h3"
                 >
                login
                 </Link>

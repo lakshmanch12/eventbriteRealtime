@@ -18,18 +18,16 @@ function BoxBtn() {
       <Button
         sx={{
           border: '1px solid black',
+          display:'flex',
           borderRadius: 1,
           height: '500',
           textTransform: 'none',
           color:'black',
-
           py: 1.2,
-          px: 24,
+          px: 20,
         }}
       >
-    
          See more 
-        
       </Button>
        </Link>
     </Container>

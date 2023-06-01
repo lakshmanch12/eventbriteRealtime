@@ -127,15 +127,12 @@ const useStyles = makeStyles((theme) => ({
     // maxWidth: 163,
   }
 }));
-
 const Login = () => {
   const [state, setState] = useState({
     email: "",
     password: "",
   });
-
   const { email, password } = state;
-
   const { currentUser } = useSelector((state) => state.user);
   let navigate = useNavigate();
 console.log(currentUser,"currentUser////////////////////////")
@@ -163,7 +160,6 @@ console.log(currentUser,"currentUser////////////////////////")
     }
     catch(error){
       console.log(error, "hdkjhvhjdv")
-
     }
   };
     // if (!email || !email.length){
@@ -210,13 +206,11 @@ console.log(currentUser,"currentUser////////////////////////")
     setState({ ...state, [name]: value });
   };
   const matches = useMediaQuery('(max-width:375px)');
-
   return (
     <>
     <ThemeProvider theme={theme}>
       <Grid container component="main" className={classes.root}>
       <CssBaseline />
-    
       <Grid item 
       // xs={12} 
       sm={12} 
@@ -383,12 +377,9 @@ console.log(currentUser,"currentUser////////////////////////")
       className={classes.image}
        />
     </Grid>
-    
-  
    </ThemeProvider>
     <Footer/>
     </>
-    
   );
 }
 
