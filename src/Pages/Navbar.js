@@ -284,15 +284,10 @@ const useStyles = makeStyles((theme) => ({
         </NavbarLinksBox>
 {tocken  ?<>
 
- <Link  to="/register" style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" >
-        {/* { user.email } */}
-          
+ <Link   style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2">
            { user.email.split('@')[0]}
             </NavLink>
             </Link>
-        
-    
-      
         <Link  style={{ textDecoration: 'none', color:"red" }}><NavLink  style={{color:"red" }}variant="body2" onClick={handleAuth} >
          logout </NavLink></Link> </> 
          :<>

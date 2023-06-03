@@ -16,6 +16,12 @@ const Salesfive = () => {
       width: "85%",
     },
   }));
+  const CustomBox1 = styled(Box)(({ theme }) => ({
+    width: "48%",
+    [theme.breakpoints.down("md")]: {
+      width: "85%",
+    },
+  }));
 
   const GuidesBox = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -62,13 +68,14 @@ const Salesfive = () => {
           margin: "0 auto",
         }}
       ></div>
-
+<CustomBox1>
       <Typography
         variant="h3"
-        sx={{ fontSize: "55px", fontWeight: "bold", color: "white", my: 3 }}
+        sx={{ fontSize: "55px", fontWeight: "bold",textAlign: "center", color: "white", my: 3 }}
       >
    The leading choice for your business
       </Typography>
+      </CustomBox1>
 
       <CustomBox>
         <Typography
@@ -95,13 +102,14 @@ const Salesfive = () => {
         From ticketing to marketing to payments, Eventbrite has all the tools you need to convert prospects into attendees, and attendees into a loyal following.
         </Typography>
       </CustomBox>
-      
+      <CustomBox1>
       <Typography
         variant="h3"
-        sx={{ fontSize: "35px", fontWeight: "bold", color: "white", my: 3 }}
+        sx={{ fontSize: "35px", fontWeight: "bold",textAlign: "center", color: "white", my: 3 }}
       >
 Delivering more attendees and a better experience
       </Typography>
+      </CustomBox1>
       <CustomBox>
         <Typography
           variant="body2"
