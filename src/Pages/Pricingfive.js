@@ -29,7 +29,7 @@ const Item = styled(Box)(({ theme }) => ({
 const Pricingfive = () => {
   const CustomContainer = styled(Container)(({ theme }) => ({
     backgroundColor: "white",
-    height: "416px",
+    height: "516px",
     borderRadius: "25px",
     // border:"1px solid black",
     display: "flex",
@@ -39,8 +39,8 @@ const Pricingfive = () => {
       height: "auto",
       flexDirection: "column",
       alignItems: "center",
-      padding: theme.spacing(4, 3, 0, 8),
-      width: "90%",
+      padding: theme.spacing(4, 4, 0, 8),
+      width: "100%",
       gap:"5"
     },
   }));
@@ -81,6 +81,10 @@ const Pricingfive = () => {
 Create your event on the world's largest event marketplace at no cost to you. 
 We've got everything you need to sell tickets, manage your events, and grow your business.
           </Typography>
+        <Box sx={{marginTop:"25px"}}>
+
+        </Box>
+
           <CustomButton
             backgroundColor="red"
             color="white"

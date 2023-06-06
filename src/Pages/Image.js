@@ -41,18 +41,30 @@ const itemData = [
 
   {
 
-    title: 'Tomato basil',
+    title: 'Today',
   },
   {
 
-    title: 'Sea star',
+    title: 'Tomorrow',
   },
   {
 
-    title: 'Bike',
+    title: 'This weekend',
   }, {
 
-    title: 'Sea star',
+    title: 'This week',
+  },
+  {
+
+    title: 'Next week',
+  },
+  {
+
+    title: 'This Month',
+  },
+  {
+
+    title: 'Next Month',
   },
 
 
@@ -207,15 +219,8 @@ const showMoreBtn = () =>{
         }}
 
       >
-
-
-
-
-        <List sx={{ width: "100%", height: "90%", display: "flex" }} rowHeight={100}>
-          {/* {itemData.map((item) => ( */}
-          <ListItem
-
-          >
+        <List sx={{ width: "100%", height: "90%", display: "flex" }} rowHeight={130}>
+          <ListItem>
             <Stack direction="row" textDecoration='none' spacing={3}>
               {itemData.map((item) => (
                 <Box key={item.img} sx={{
@@ -224,29 +229,18 @@ const showMoreBtn = () =>{
                   backgroundColor: "white",
                   textAlign: 'center',
                   textDecoration: 'none',
-                  // py: -1.2,
+                  py: -1.2,
 
                 }}
                 >
                   <Avatar
                     sx={{
-                      width: 76, height: 76, alignItems: 'center',
-                      my: '4', marginLeft: "-19px", marginTop: "-5px", color: 'blue', textDecoration: 'none', backgroundColor: "#f8f7fa"
+                      width: 76, height: 76, alignItems: 'center', my: '4', marginLeft: "-19px", marginTop: "-5px", color: 'blue', textDecoration: 'none', backgroundColor: "#f8f7fa"
                     }}
                   >  <AccessTimeIcon /> </Avatar>
-
-
-
                   <Typography component="body2"
-                    sx={{ alignItems: 'center',
-                    //  my: '4', 
-                    //  marginLeft: "18px",
-                    //   marginTop: "26px",
-                    //   py: -3.7,
-                    //   px:10,
-                       color: 'blue', textDecoration: 'none' }}
-                    variant="body2"    >
-                    Today
+                    sx={{ color: 'blue', textDecoration: 'none',fontSize:"1.125rem", marginBottom: "5px", lineHeight:"1.75rem",textAlign: 'center', }}variant="body2"    >
+                    {item.title}
                   </Typography>
 
                 </Box>

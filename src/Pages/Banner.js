@@ -78,9 +78,6 @@ const Banner = () => {
             //   fullWidth
             backgroundColor="red"
               variant="contained"
-            //   size="large"
-            
-            //   className={classes.btngoggle}
             >
           Find your next event
             </ColorButton>

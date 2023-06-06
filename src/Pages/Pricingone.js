@@ -15,18 +15,13 @@ const Pricingone = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",
-    gap: theme.spacing(5),
+    gap: theme.spacing(9),
     marginTop: theme.spacing(7),
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
  
     },
   }));
-
- 
- 
-
-
   return ( 
     <ThemeProvider theme={theme}>
 
@@ -54,7 +49,7 @@ const Pricingone = () => {
             variant="h1"
             sx={{
               fontWeight: "700",
-              fontSize: "5.23rem",
+              fontSize: "3.3rem",
               lineHeight:"4.688rem",
               color: "#3B3c45",
               my: 1,

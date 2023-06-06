@@ -217,21 +217,12 @@ const Sub = () => {
         <ThemeProvider theme={theme}>
             <Grid container component="main" className={classes.root}>
                 <CssBaseline />
-
-                     <Grid item 
-                    //  xs={12} sm={8} md={6} 
-                    sm={12} 
-      md={6} 
-       lg={6}
-                     component={Paper} elevation={6} square>
+                     <Grid item   sm={12}   md={6} lg={6} component={Paper} elevation={6} square>
                          <Container maxWidth="sm">
                     <div className={classes.paper}>
-                   
-                     
                         <img style={{ width: 140, height: 50 }}
                             src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eventbrite_logo_2018.png"
                             alt="React Logo" />
-
                         <Typography component="h1" className={classes.login}
                             variant="h3"
                         >
@@ -348,7 +339,7 @@ const Sub = () => {
                                 className={classes.characters}
                                 variant="body2"
                             >
-                                your password must be at least 8 characters
+                                your password must be at least 6 characters
                             </Typography>
                             <Button
                                 type="submit"

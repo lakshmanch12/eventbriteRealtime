@@ -116,9 +116,12 @@ const Seemorefirst = () =>{
     const handleClose = () => {
       setOpen(false);
     };
-    const [open1, setOpen1] = React.useState(true);
+    const [open1, setOpen1] = React.useState(false);
 
     const clickme = () => {
+      setOpen1(!open1);
+    };
+    const clickme1 = () => {
       setOpen1(!open1);
     };
     const text = {
@@ -182,9 +185,6 @@ Sign in to see events
             textTransform: 'none',
             backgroundColor:"red",
             marginBottom:'55px',
-            
-
-           
             py: 1.2,
             px: 5,
           }}>
@@ -238,11 +238,11 @@ Sign in to see events
     
     >
     
-      <ListItemButton onClick={clickme}>
+      <ListItemButton onClick={clickme1}>
       <ListItemText 
                      primary={<Typography variant="h6" style={{ color: '#39364f' }}>Price</Typography>}
                     />
-        {open1 ? <ExpandLess /> : <ExpandMore />}
+        {open1? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open1} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>

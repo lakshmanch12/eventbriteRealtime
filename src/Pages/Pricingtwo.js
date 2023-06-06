@@ -27,7 +27,7 @@ const Pricingtwo = () => {
     padding: theme.spacing(10, 0, 10, 0),
     margin: theme.spacing(0, 2, 0, 2),
     [theme.breakpoints.down("md")]: {
-      padding: "0",
+      padding: "1",
     },
   }));
 

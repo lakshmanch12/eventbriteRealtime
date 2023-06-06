@@ -97,32 +97,27 @@ const [showMore, setShowMore] = useState(false);
 
 
         <List sx={{ width: "100%", height: "100%", display: "flex" }} >
-          {/* {totalItems.map((item) => ( */}
+          {totalItems.map((item) => (
           <ListItem
-
           >
             <Stack direction="row" textDecoration='none' spacing={3}>
-              {totalItems.map((item) => (
+              {/* {totalItems.map((item) => ( */}
                 <Box key={item.name} sx={{
-                  width: 240,
+                  width: 260,
                   height: 70,
                   
                   backgroundColor: "white",
                   textAlign: 'center',
                   textDecoration: 'none',
-                  py: -1.2,
+                  marginTop:"25px"
 
                 }}
                 >
-                 
-
-
-
                   <Typography component="body2"
                     sx={{ alignItems: 'center',
                     //  my: '4', 
                     //  marginLeft: "18px",
-                    //   marginTop: "26px",
+                      marginTop: "26px",
                     //   py: -3.7,
                     //   px:10,
                     marginTop:4,
@@ -133,14 +128,14 @@ const [showMore, setShowMore] = useState(false);
 
                 </Box>
                 
-              ))}
+              
 
 
 
             </Stack>
           </ListItem>
 
-          {/* ))} */}
+          ))}
         </List>
 
 
