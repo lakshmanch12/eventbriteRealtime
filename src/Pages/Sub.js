@@ -161,6 +161,7 @@ const Sub = () => {
     const handleformSubmit = (e) => {
         e.preventDefault();
         console.log("")
+        alert("errors")
 
         if (!email || !email.length) {
             setEmailError("Email address doesn't match. Please try again");
@@ -172,6 +173,15 @@ const Sub = () => {
         if (!password || !password.length) {
             setpasswordError(" Field required");
 
+        }
+        else if (password.length < 6){
+            setpasswordError(" please enter more then six characters");
+        }
+        else if (password.length > 6){
+            setpasswordError(" Your password strength is good");
+        }
+        else if (!password.length > 10){
+            setpasswordError(" please enter less then ten characters ");
         }
         else {
             setpasswordError("");
@@ -339,7 +349,7 @@ const Sub = () => {
                                 className={classes.characters}
                                 variant="body2"
                             >
-                                your password must be at least 6 characters
+                               {passwordError} 
                             </Typography>
                             <Button
                                 type="submit"

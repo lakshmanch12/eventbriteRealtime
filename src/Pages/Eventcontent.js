@@ -18,7 +18,7 @@ import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import FileUploadTwoToneIcon from '@mui/icons-material/FileUploadTwoTone';
 import List from '@mui/material/ImageList';
-import ListItem from '@mui/material/ImageListItem';
+// import ListItem from '@mui/material/ImageListItem';
 import { Icon } from '@iconify/react';
 import { useTheme } from '@mui/material/styles';
 import FeaturedPost from './FeaturedPost';
@@ -34,9 +34,26 @@ const featuredPosts = [
   {
     title: "Indian Designer's Haat VIZAG0. 3",
     date: "  Indian Designer's Haat Vijaywada Thu, Apr 6, 11:00 AM'" ,
+  
+    description:  'A convention center at vijyawada ap 531038.',
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4',
+
+    imageLabel: 'Image Text',
+  },
+  {
+    title: "most  popular 's Haat reno. ",
+    date: "  mexico Designer's Haat near sony Thu, Apr 6, 12:00 AM'" ,
     description:
       'A convention center at vijyawada ap 531038.',
-    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4',
+    image: 'https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?cs=srgb&dl=pexels-godisable-jacob-949670.jpg&fm=jpg',
+    imageLabel: 'Image Text',
+  },
+  {
+    title: "Indian Designer's Haat VIZAG0. 3",
+    date: "  chineesi Designer's Haat guntur Thu, Apr 6, 11:00 AM'" ,
+    description:
+      'A convention center at vijyawada ap 531038.',
+      image: 'https://cdn0.desidime.com/topics/photos/1301090/original/03062021-m-unisex-topbanner-giantfashionsale-50to80.jpg?1622692676',
 
     imageLabel: 'Image Text',
   },
@@ -45,8 +62,7 @@ const featuredPosts = [
     date: "  Indian Designer's Haat Vijaywada Thu, Apr 6, 11:00 AM'" ,
     description:
       'A convention center at vijyawada ap 531038.',
-    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F456707759%2F1057323484683%2F1%2Foriginal.20230228-074940?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2cba30eae323c4d280c836dcfdaaa8c4',
-
+    image: 'https://assets-static.invideo.io/images/origin/Creative_Fashion_Digital_Marketing_Ideas_To_Boost_Sales_2_0d0bbb116f.png',
     imageLabel: 'Image Text',
   },
 ];
@@ -64,11 +80,35 @@ const Item = styled(Paper)(({ theme }) => ({
       backgroundColor: red[700],
     },
   }));
+  
+ 
+  const ListItem = styled('li')(({ theme }) => ({
+    margin: theme.spacing(0.5),
+  }));
+  
 
 const Eventcontent = () => {
   const theme = useTheme();
+  const [chipData, setChipData] = React.useState([
+    { key: 0, label: 'india events' },
+    { key: 1, label: 'andhrapradesh events' },
+    { key: 2, label: 'things to do in vizag' },
+    { key: 3, label: ' vijayawada expos' },
+    { key: 4, label: 'vijayawada fashin expos' },
+    { key: 2, label: '#events' },
+    { key: 3, label: ' #exhibition' },
+    { key: 4, label: '#Events_near_me' },
+    { key: 2, label: 'Polymer' },
+    { key: 3, label: '#exhibition_opening' },
+    { key: 4, label: '#exhibition_event' },
+    { key: 2, label: ' #exhibition_2023' },
+    { key: 3, label: ' #indiandesigenshaat' },
+    { key: 4, label: ' #idexhabtion' }, 
+    { key: 3, label: '#upcomingexhibition' },
+  ]);
   return (
-    <div><Container>
+    <div>
+      <Container>
     <Box sx={{ flexGrow: 1 ,marginTop:"20px"}}>
 <Grid container spacing={2}>
 <Grid item xs={12} md={8} sm={12}>
@@ -100,7 +140,7 @@ const Eventcontent = () => {
     About this event
             </Typography>
         <Grid container alignItems="center" >
-        <Grid item xs={12} sm={4} md={6} >
+        <Grid item xs={12} sm={12} md={12} >
                 
                
                 <Stack direction="row"textDecoration= 'none' spacing={0}>
@@ -118,52 +158,48 @@ const Eventcontent = () => {
             <Stack direction="row"textDecoration= 'none' spacing={0}>
           </Stack>
               </Grid>
-          <Grid item>
+
+          <Grid item xs={12} sm={12} md={12}>
+         
           </Grid>
         </Grid>
         
         
       </Box>
       <Box >
-    <Typography  variant="h2" component="div" 
+      <Typography  variant="h2" component="div" 
     sx={{fontSize: '25px',fontWeight:'800',color:'#1e0a3c',marginLeft:"10px",marginTop:"60px"}}>
    Tags
             </Typography>
-        <Grid container alignItems="center" >
-        <Grid item xs={2} sm={4} md={12} >
-                
-               
-     
- 
-    <Stack spacing={2} sx={{marginTop:"20px"}}
-     >
-      <Stack direction="row" spacing={2}>
-      <Chip label="india events" />
-      <Chip label="Andhrapradesh events" />
-      <Chip label=" thing to do in vijayawada" />
-      <Chip label="  vijayawada expos" />
-      </Stack>
-      <Stack direction="row" spacing={2}>
-      <Chip label="  vijayawada fashin expos" />
-      <Chip label="   #events" />
-      <Chip label="   #exhibition" />
-      <Chip label="   #Events_near_me" />
-      <Chip label="   #exhibition_opening" />
-      </Stack>
-      <Stack direction="row" spacing={2}>
-      <Chip label="   #exhibition_event" />
-      <Chip label="   #exhibition_2023" />
-      <Chip label="   #indiandesigenshaat" />
-      <Chip label="   #idexhabtion" />
-      <Chip label="   #upcomingexhibition" />
-      </Stack>
-    </Stack>
-            <Stack direction="row"textDecoration= 'none' spacing={0}>
-          </Stack>
-              </Grid>
-          <Grid item>
-          </Grid>
-        </Grid>
+      <Box
+      sx={{
+        display: 'flex',
+        // justifyContent: 'center',
+        flexWrap: 'wrap',
+        listStyle: 'none',
+        p: 0.5,
+        m: 0,
+      }}
+      component="ul"
+    >
+      {chipData.map((data) => {
+        let icon;
+
+        
+
+        return (
+          <ListItem key={data.key}>
+            <Chip
+              icon={icon}
+              label={data.label}
+            
+            />
+          </ListItem>
+        );
+      })}
+    </Box>
+    
+       
       </Box>
       <Box >
         <Grid container alignItems="center" sx={{marginTop:"30px"}}>
@@ -223,10 +259,10 @@ const Eventcontent = () => {
       </Box>
   </Item>
 </Grid>
-<Grid item xs={12} md={4} sm={4}  
+<Grid item xs={12} md={4} sm={6}  
 sx={{ display: { xs: "none", sm: "block", md:"block"}}}
 >
-  <Item sx={{p:3}} >
+  <Item sx={{p:3, alignItems:"center", justifyContent:"center",}} >
   <Box  sx={{ p: 1, alignItems:"center",  flexGrow: 1 ,  borderRadius: 3, border: '2px solid blue' }}>
   <Grid container alignItems="center">
           <Grid item xs > 
@@ -242,7 +278,8 @@ sx={{ display: { xs: "none", sm: "block", md:"block"}}}
           free
             </Typography>
     </Box>
-    <Button
+    {/* <Button
+    sx={{ p: 1,   marginTop:"8px", display: 'flex', alignItems:"center",  backgroundColor:"red", justifyContent:"center",flexGrow: 1 ,px: 16.5,py: 0.8,  borderRadius: 3, }}
         sx={{
           marginTop:"8px",
          justifyContent:"center",
@@ -254,13 +291,31 @@ sx={{ display: { xs: "none", sm: "block", md:"block"}}}
           display: 'flex',
 
           py: 0.8,
-          px: 10.5,
+          px: 16.5,
         }}
       >
     
          Resereve 
         
+      </Button> */}
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 2}}>
+      <Button
+        sx={{
+        
+          display:'flex',
+          borderRadius: 3,
+          backgroundColor:"red",
+          height: '200',
+          textTransform: 'none',
+          color:'black',
+          py: 1.2,
+          px: 12,
+        }}
+      >
+          Resereve 
       </Button>
+      </Box>
+     
     
   </Item>
 
@@ -269,7 +324,7 @@ sx={{ display: { xs: "none", sm: "block", md:"block"}}}
 </Box>
 
     </Container>
-    <Eventcontentpost/>
+    {/* <Eventcontentpost/> */}
     </div>
   )
 }

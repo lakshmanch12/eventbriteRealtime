@@ -14,24 +14,19 @@ const Blog = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",
-    gap: theme.spacing(5),
-    marginTop: theme.spacing(7),
+    gap: theme.spacing(2),
+    marginTop: theme.spacing(1),
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
  
     },
   }));
 
- 
- 
-
-
   return ( 
     <ThemeProvider theme={theme}>
 
     <Box 
          sx={{ backgroundImage: `url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQJu_lEehE4Cn6R1HFV6Og61twFPBwFyBiNFJmEwUaH8wPq1l5K)`,
-     
          backgroundSize: "cover",
         }}
          >
@@ -39,7 +34,7 @@ const Blog = () => {
        
         <CustomBox 
          sx={{ backgroundImage: `url(https://www.shutterstock.com/image-vector/blue-dark-black-abstract-background-260nw-1081094726.jpg)`,
-          minHeight: "40vh",marginTop:"70px",border: '1px solid black',
+          minHeight: "40vh",marginTop:"4px",border: '1px solid black',
           backdropFilter:"blur(20px)",
           backgroundSize: "cover",
           display:"flex",

@@ -76,27 +76,35 @@ const itemData1 = [
   {
    
     title: '  Archives',
-    count:"2941 followers"
+    count:"2941 followers",
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F89593685%2F303007241545%2F2%2Foriginal.png?h=200&w=200&auto=format%2Ccompress&q=75&sharp=10&s=d421f0246548fbb5ab784f053a67f052'
   },
   {
     title: 'Skyschools',
-    count:"46941 followers"
+    count:"4641 followers",
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F189290609%2F619034277113%2F1%2Foriginal.20211120-091415?h=200&w=200&auto=format%2Ccompress&q=75&sharp=10&rect=514%2C0%2C2480%2C2480&s=4022938864f0a7022b0e7d1603836892'
   },
   {
     title: 'medation',
-    count:"6741 followers"
+    count:"6741 followers",
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F106948530%2F166312578381%2F1%2Foriginal.20200724-203636?h=200&w=200&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1280%2C1280&s=9487cfccb5a9a1d68171fd8b29ff76ef'
   },
   {
     title: 'Skyschools',
-    count:"56741 followers"
+    count:"5741 followers",
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F203478879%2F529658104897%2F1%2Foriginal.20211221-122011?h=200&w=200&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C22%2C2294%2C2294&s=e01e23f48ec18e4ad068497e6b305b6d'
   },
   {
     title: 'Design',
-    count:"4741 followers"
+    count:"4741 followers",
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F89593685%2F303007241545%2F2%2Foriginal.png?h=200&w=200&auto=format%2Ccompress&q=75&sharp=10&s=d421f0246548fbb5ab784f053a67f052'
+
   },
   {
     title: 'Archives',
-    count:"87541 followers"
+    count:"7541 followers",
+    image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F106948530%2F166312578381%2F1%2Foriginal.20200724-203636?h=200&w=200&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1280%2C1280&s=9487cfccb5a9a1d68171fd8b29ff76ef'
+
   },
   
   
@@ -165,12 +173,17 @@ The national Archives
       
     </Stack>
      
-      <CardContent>
-      <Avatar
+      <CardContent sx={{ maxWidth: 945, padding:'25px',textAlign:"center" }}>
+      {/* <Avatar
         alt="Remy Sharp"
         src=""
         sx={{ width: 56, height: 56, padding:"25px" }}
-      />
+      /> */}
+       <Avatar 
+                    alt="Remy Sharp"
+                    src={item.image}
+                    sx={{ width: 96, height: 96,}}
+                  />
         <Typography gutterBottom variant="h5" component="div" sx={{marginTop:"20px", fontSize:"20px"}}>
         {item.title}
         </Typography>

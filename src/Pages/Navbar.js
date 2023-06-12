@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(1),
     },
     title: {
       display: 'none',
@@ -46,13 +46,16 @@ const useStyles = makeStyles((theme) => ({
       '&:hover': {
         backgroundColor: alpha(theme.palette.common.white, 0.25),
       },
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(1),
       marginLeft: 0,
+      
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(3),
+        marginLeft: theme.spacing(1),
         width: 'auto',
       },
+      
+      
     },
     searchIcon: {
       padding: theme.spacing(0, 2),
@@ -73,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('md')]: {
-        width: '50ch',
+        width: '40ch',
         display: "block",
       },
     
@@ -146,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-       <NavbarLogo  style={{ width: 140, height: 50 }}
+       <NavbarLogo  style={{ width: 120, height: 50 }}
                src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eventbrite_logo_2018.png" 
 
           alt="logo" />
@@ -189,7 +192,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    gap: theme.spacing(4),
+    gap: theme.spacing(3),
     [theme.breakpoints.down("md")]: {
       display: "none",
     },
@@ -198,9 +201,9 @@ const useStyles = makeStyles((theme) => ({
   const CustomMenuIcon = styled(MenuIcon)(({ theme }) => ({
     cursor: "pointer",
     display: "none",
-    padding:"2",
+    padding:"1",
     marginTop:"5",
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(),
     [theme.breakpoints.down("md")]: {
       display: "block",
     },
@@ -230,7 +233,7 @@ const useStyles = makeStyles((theme) => ({
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: "2.5rem",
+          gap: "5.5rem",
         }}
       >
         <Box sx={{ display: "flex",  }}>
@@ -243,7 +246,7 @@ const useStyles = makeStyles((theme) => ({
             {list("left")}
           </Drawer>
           
-          <NavbarLogo  style={{ width: 140, height: 50 }}
+          <NavbarLogo  style={{ width: 100, height: 50 }}
                src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Eventbrite_logo_2018.png" 
 
           alt="logo" />

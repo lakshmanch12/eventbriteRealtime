@@ -149,7 +149,7 @@ const Register = () => {
       setEmailError("");
       //navigate("/Sub");
       navigate(
-        '/Sub',
+        '/sub',
         {
           state: formData
         }

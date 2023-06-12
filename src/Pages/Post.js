@@ -55,13 +55,13 @@ const Post = () => {
 					return(
             <Link  to="/event"  style={{ textDecoration: 'none' }}  >
           <Card 
-          sx={{ maxWidth: "280px",  m: 2 }}
+          sx={{ maxWidth: "270px",  m: 2 }}
           >
             <CardActionArea>
           
        <CardMedia
          component="img"
-        sx={{ height: 230, width: 280 }}
+        sx={{ height: 200, width: 280 }}
         src={itmes.image} 
       
         title="green iguana"

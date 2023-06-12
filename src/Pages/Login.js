@@ -38,6 +38,7 @@ import {
 
 } from "../redux/actions/userActions";
 import {useForm} from 'react-hook-form';
+// import { styled } from '@mui/material/styles';
 
 
 
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(0, 9),
     display: 'flex',
     flexDirection: 'column',
-    // alignItems: 'center',
+    alignItems: 'center',
   },
   login: {
     
@@ -111,22 +112,31 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(5, 0, 5), 
   },
   box: {
-    // margin: theme.spacing(1, 25),
+    margin: theme.spacing(1, 0, 0),
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
   },
   chip:{
     margin: theme.spacing(2.7, 0, 1), 
+    display: 'flex',
+    flexDirection: 'row',
   },
   divider:{
-    margin: theme.spacing(3.6, 0, 1), 
+    margin: theme.spacing(2.6, 0, 1), 
     display: 'flex',
     flexDirection: 'row',
     width: '45%',
     // maxWidth: 163,
   }
 }));
+// const Root = styled('div')(({ theme }) => ({
+//   width: '100%',
+//   ...theme.typography.body2,
+//   '& > :not(style) + :not(style)': {
+//     marginTop: theme.spacing(2),
+//   },
+// }));
 const Login = () => {
   const [state, setState] = useState({
     email: "",
@@ -286,6 +296,7 @@ console.log(currentUser,"currentUser////////////////////////")
             >
           Log in
             </Button>
+            
             <Box   className={classes.box}>
          <Divider  
          className={classes.divider}
@@ -295,10 +306,16 @@ console.log(currentUser,"currentUser////////////////////////")
       <Divider  
          className={classes.divider}
          />
-                
 
+{/* <Root> */}
+{/* <Divider>
+        // <Chip label="CHIP" />
+      </Divider> */}
+      {/* </Root> */}
+   
+  
          </Box>
-                
+
 
                 <Button
               type="submit"

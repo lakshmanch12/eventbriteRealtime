@@ -69,7 +69,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 10, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="all" {...a11yProps(0)} />
           <Tab label="for you" {...a11yProps(1)} />

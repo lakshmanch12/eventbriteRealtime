@@ -25,7 +25,7 @@ function FeaturedPost(props) {
               {post.description}
             </Typography>
             <Typography variant="subtitle1" color="text.secondary">
-              {post.description}
+              {post.venue}
             </Typography>
             <Typography variant="subtitle1" color="primary">
              Free

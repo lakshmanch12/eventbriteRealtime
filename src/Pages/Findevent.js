@@ -9,6 +9,8 @@ import Findeventtwo from './Findeventtwo';
 import Findeventthree from './Findeventthree';
 import Findeventfour from './Findeventfour';
 import Findeventfive from './Findeventfive';
+import Postone from './Postone';
+
 
 
 
@@ -20,7 +22,10 @@ const findevent = () => {
             </ThemeProvider>
             <Findeventone/>
             <Findeventthree/>
-            <Findeventtwo/>
+            <Container >
+            <Postone/>
+            </Container>
+            {/* <Findeventtwo/> */}
             <Findeventfive/>
             <Findeventfour/>
             <Footer/>

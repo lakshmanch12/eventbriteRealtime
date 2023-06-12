@@ -31,3 +31,9 @@ export const GET_HOME_PAGE_ERROR = "GET_HOME_PAGE_ERROR";
 export const GET_SeeMore_PAGE_START = "GET_SeeMore_PAGE_START";
 export const GET_SeeMore_PAGE_SUCCESS = "GET_SeeMore_PAGE_SUCCESS";
 export const GET_SeeMore_PAGE_ERROR = "GET_SeeMore_PAGE_ERROR";
+
+
+
+export const GET_Find_PAGE_START = "GET_Find_PAGE_START";
+export const GET_Find_PAGE_SUCCESS = "GET_Find_PAGE_SUCCESS";
+export const GET_Find_PAGE_ERROR = "GET_Find_PAGE_ERROR";
