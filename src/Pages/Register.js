@@ -108,12 +108,19 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2.7, 0, 1), 
     display: 'flex',
   },
+  // divider:{
+  //   margin: theme.spacing(4.5, 0, 1), 
+  //   display: 'flex',
+  //   flexDirection: 'row',
+  //   width: '60%',
+  //   maxWidth: 200,
+  // },
   divider:{
-    margin: theme.spacing(4.5, 0, 1), 
+    margin: theme.spacing(4.6, 0, 1), 
     display: 'flex',
     flexDirection: 'row',
-    width: '60%',
-    maxWidth: 200,
+    width: '45%',
+  
   }
 }));
 
@@ -227,14 +234,14 @@ const Register = () => {
           continue
             </Button>
          <Box   className={classes.box}>
-         {/* <Divider  
+         <Divider  
          className={classes.divider}
          />
       <Chip variant="outlined" className={classes.chip} size="large" label="or" />
 
       <Divider  
          className={classes.divider}
-         /> */}
+         />
          </Box>   
             <Button
               type="submit"

@@ -18,7 +18,7 @@ export const loadfindeventPageError = (error) =>({
 });
 // 
 export const getFindEventPageInitiate = () => {
-    alert('get user in acation page');
+    // alert('get user in acation page');
     return function (dispatch) {
         dispatch(loadfindeventPageStart());
         findEventApi()

@@ -11,8 +11,8 @@ import Container from '@mui/material/Container';
 function BoxBtn() {
   return (
     <Container
-      component="section"
-      sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 9 }}
+      // component="section"
+      sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 8 }}
     >
       <Link  to="/seemore" style={{ textDecoration: 'none' }}   >
       <Button
@@ -24,7 +24,7 @@ function BoxBtn() {
           textTransform: 'none',
           color:'black',
           py: 1.2,
-          px: 20,
+          px: 17,
         }}
       >
          See more 

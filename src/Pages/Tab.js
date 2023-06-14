@@ -30,7 +30,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index&&(
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 1 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -92,7 +92,7 @@ const Item = styled(Paper)(({ theme }) => ({
           variant="h3">
       check out trending categories
           </Typography>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 16 }}>
+      <Grid container spacing={{ xs: 1, md: -1}} columns={{ xs: 4, sm: 8, md: 16 }}>
       
          <Grid item xs={12} sm={4} md={4} >
                 
