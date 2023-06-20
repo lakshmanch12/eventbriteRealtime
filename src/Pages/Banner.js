@@ -73,7 +73,7 @@ const Banner = () => {
             <Link  to="/findevent" 
               
                 >
-               <ColorButton  sx={{ my: 7}}
+               <ColorButton  sx={{ my: 6}}
               type="submit"
             //   fullWidth
             backgroundColor="red"

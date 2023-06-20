@@ -10,14 +10,17 @@ import { alpha } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import Grid from '@mui/material/Grid';
+import {  Link } from "react-router-dom";
+import MusicNoteOutlinedIcon from '@mui/icons-material/MusicNoteOutlined';
+import RollerSkatingOutlinedIcon from '@mui/icons-material/RollerSkatingOutlined';
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const useStyles = makeStyles((theme) => ({
     box: {
       margin: theme.spacing(4, 2),
       display: 'flex',
-      flexDirection: 'row',
+      flexDirection: 'coloumn',
       alignItems: 'center',
     },
    
@@ -87,25 +90,85 @@ const getLocationJs = () => {
     <>
     <Box   className={classes.box}>
       
-   <Typography variant="h4" gutterBottom  
-//    className={classes.typo}
-sx={{  fontWeight: 'bold',  fontWeight: "800", letterSpacing: ".5px",}}
-
-   >
-        Popular in  
-       
+   {/* <Typography variant="h4" gutterBottom  
+sx={{  fontWeight: 'bold',  fontWeight: "800", letterSpacing: ".5px",}}>
+        Popularin  
        </Typography>
        <KeyboardArrowDownIcon  
        sx={{  color:"#002dbd"}}
-       />
+       /> */}
         
 
       
-        <Input  sx={{  fontSize: "30px",
+        {/* <Input  sx={{  fontSize: "30px",
+        color:"#002dbd  ! important", opacity:"2", fontWeight: '900',lineHeight:"40px" ,letterSpacing: ".5px"}}
+         placeholder= { currLocation.city}
+    
+        /> */}
+  <Grid container spacing={{ xs: 1, md: 1}} columns={{ xs: 4, sm: 12, md: 17 }} sx={{marginTop:"100px"}}>
+      
+      <Grid item xs={12} sm={4} md={4} >
+             
+         <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
+         <Stack direction="row"textDecoration= 'none' spacing={0}>
+         <Box sx={{
+     width: 180,
+     height: 70,
+   
+     textAlign: 'center',
+  
+     py: 2.2,
+   }}
+ >
+    <Typography variant="h4" gutterBottom  
+sx={{  fontWeight: 'bold',  fontWeight: "800", letterSpacing: ".5px",color:"black"}}>
+        Popular in  
+       </Typography>
+      
+     
+     </Box>
+     <Box
+   sx={{
+     width: 50,
+     height: 70,
+     py: 3.2,
+     paddingLeft:'16px'
+   }}
+ >
+    <KeyboardArrowDownIcon  
+       sx={{  color:"#002dbd"}}
+       />
+     </Box>
+   </Stack>
+         </Link>
+       
+       </Grid>
+       
+       <Grid item xs={12} sm={4} md={4} >
+       <Link  to="/catgeory" style={{ textDecoration: 'none' }}>
+         <Stack direction="row" spacing={0}>
+       
+
+     <Box
+   sx={{
+     width: 210,
+     height: 70,
+     py: 1.2,
+   paddingLeft:'-16px',
+  
+   
+   }}
+ >
+     <Input  sx={{  fontSize: "30px",
         color:"#002dbd  ! important", opacity:"2", fontWeight: '900',lineHeight:"40px" ,letterSpacing: ".5px"}}
          placeholder= { currLocation.city}
     
         />
+     </Box>
+   </Stack>
+         </Link>
+       </Grid>
+   </Grid>
 
     </Box>
   

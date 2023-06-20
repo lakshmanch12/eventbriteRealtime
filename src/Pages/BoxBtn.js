@@ -10,7 +10,8 @@ import Container from '@mui/material/Container';
 
 function BoxBtn() {
   return (
-    <Container
+  <>
+    {/* <Container
       // component="section"
       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 8 }}
     >
@@ -24,13 +25,31 @@ function BoxBtn() {
           textTransform: 'none',
           color:'black',
           py: 1.2,
-          px: 17,
+          px: 16,
         }}
       >
          See more 
       </Button>
+      
        </Link>
-    </Container>
+    </Container> */}
+       <Box    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 8 }}
+      >
+      <Button  
+      sx={{
+      border: '1px solid black',
+      display:'flex',
+      borderRadius: 1,
+      //  height: '200',
+      textTransform: 'none',
+      color:'black',
+      py: 1.2,
+      px: 15,
+    }}>
+    See more 
+  </Button>
+      </Box> 
+ </>
   );
 }
 

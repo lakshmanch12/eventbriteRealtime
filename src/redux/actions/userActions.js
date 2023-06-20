@@ -1,13 +1,8 @@
 import * as types from './actionTypes';
 import { auth, } from "../../firebase";
-import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword ,signOut} from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword ,signOut} from "firebase/auth";
 import { provider , facebookAuthProvider } from "../../firebase";
-// import { createUserWithEmailAndPassword } from "../firebase";
 import {  signInWithPopup } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
-
-
-// let navigate = useNavigate();
 const registerStart = () => ({
     type: types.REGISTER_START,
   });

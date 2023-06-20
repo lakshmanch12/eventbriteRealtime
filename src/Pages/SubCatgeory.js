@@ -142,12 +142,12 @@ const Hero = () => {
     </Stack>
     <Image/>
    
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 ,marginBottom:'25px'}}>
       <Typography component="h1"sx={{ fontSize: "1.5rem", lineHeight: "2rem",fontWeight:"700",letterSpacing:"0.25px"}}
           variant="h3">
       check out trending categories
           </Typography>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 16 }}>
+      <Grid container spacing={{ xs: 1, md: -1 }} columns={{ xs: 4, sm: 10, md: 16 }}>
       
          <Grid item xs={12} sm={4} md={4} >
                 
@@ -213,7 +213,7 @@ const Hero = () => {
       }}
     >
        <Typography component="body2"
-       sx={{ alignItems:'center' , my:'4', color:'black',textTransform: 'none',
+       sx={{ alignItems:'center' , my:'4', marginLeft:"16px",color:'black',textTransform: 'none',
     
 }}
           variant="body2"    >
@@ -490,7 +490,7 @@ Film & media
         </Box>
         <Box
       sx={{
-        width: 210,
+        width: 195,
         height: 30,
         py: 2.2,
         paddingLeft:"16px",
@@ -546,7 +546,7 @@ Film & media
         </Box>
         <Box
       sx={{
-        width: 210,
+        width: 195,
         height: 30,
         py: 2.2,
       paddingLeft:'16px',

@@ -33,8 +33,9 @@ const Home = (props) => {
             <Tablist/>
             <Post/>
             <Get/>
-            <BoxBtn/> 
+            
       </Container>
+      <BoxBtn/> 
              <Footer/>
     </div>
   )

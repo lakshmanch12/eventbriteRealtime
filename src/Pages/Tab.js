@@ -88,11 +88,11 @@ const Item = styled(Paper)(({ theme }) => ({
       </Box>
       <TabPanel value={value} index={0}>
       <Box sx={{ flexGrow: 1 }}>
-      <Typography component="h1"sx={{ fontSize: "1.5rem", lineHeight: "2rem",fontWeight:"700",letterSpacing:"0.25px"}}
+      <Typography component="h1"sx={{ fontSize: "1.5rem",marginTop:"25px",marginBottom:"15px", lineHeight: "2rem",fontWeight:"700",letterSpacing:"0.25px"}}
           variant="h3">
       check out trending categories
           </Typography>
-      <Grid container spacing={{ xs: 1, md: -1}} columns={{ xs: 4, sm: 8, md: 16 }}>
+      <Grid container spacing={{ xs: 1, md: -1}} columns={{ xs: 4, sm: 10, md: 16 }}>
       
          <Grid item xs={12} sm={4} md={4} >
                 
@@ -100,7 +100,7 @@ const Item = styled(Paper)(({ theme }) => ({
             <Stack direction="row"textDecoration= 'none' spacing={0}>
             <Box sx={{
         width: 80,
-        height: 70,
+        height: 60,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
      
@@ -112,7 +112,7 @@ const Item = styled(Paper)(({ theme }) => ({
         <Box
       sx={{
         width: 210,
-        height: 70,
+        height: 60,
         py: 2.2,
         backgroundColor: '#f8f7fa',
         paddingLeft:'16px'
@@ -136,7 +136,7 @@ variant="body2"   >
             <Box
       sx={{
         width: 80,
-        height: 70,
+        height: 60,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
@@ -155,7 +155,7 @@ variant="body2"   >
         <Box
       sx={{
         width: 210,
-        height: 70,
+        height: 60,
         py: 2.2,
         paddingLeft:"16px",
       
@@ -193,7 +193,7 @@ variant="body2"   >
             <Box
       sx={{
         width: 80,
-        height: 70,
+        height: 60,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
@@ -207,7 +207,7 @@ variant="body2"   >
         <Box
       sx={{
         width: 210,
-        height: 70,
+        height: 60,
         py: 2.2,
        paddingLeft:'16px',
         backgroundColor: '#f8f7fa',
@@ -231,7 +231,7 @@ variant="body2"   >
             <Box
       sx={{
         width: 80,
-        height: 70,
+        height: 60,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
@@ -243,7 +243,7 @@ variant="body2"   >
         <Box
       sx={{
         width: 210,
-        height: 70,
+        height: 60,
         py: 2.2,
       paddingLeft:'16px',
         backgroundColor: '#f8f7fa',
@@ -267,7 +267,7 @@ variant="body2"   >
             <Box
       sx={{
         width: 80,
-        height: 70,
+        height: 60,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
@@ -283,7 +283,7 @@ variant="body2"   >
         <Box
       sx={{
         width: 210,
-        height: 70,
+        height: 60,
         py: 2.2,
         paddingLeft:'16px',
       
@@ -308,7 +308,7 @@ variant="body2"   >
             <Box
       sx={{
         width: 80,
-        height: 70,
+        height: 60,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
@@ -322,7 +322,7 @@ variant="body2"   >
         <Box
       sx={{
         width: 210,
-        height: 70,
+        height: 60,
         py: 2.2,
       paddingLeft:'16px',
         backgroundColor: '#f8f7fa',
@@ -345,7 +345,7 @@ variant="body2"   >
             <Box
       sx={{
         width: 80,
-        height: 70,
+        height: 60,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
@@ -357,7 +357,7 @@ variant="body2"   >
         <Box
       sx={{
         width: 210,
-        height: 70,
+        height: 60,
         py: 2.2,
         backgroundColor: '#f8f7fa',
       paddingLeft:'16px'
@@ -375,7 +375,7 @@ variant="body2"   >
             <Stack direction="row" spacing={0}>
             <Box sx={{
         width: 80,
-        height: 70,
+        height: 60,
         backgroundColor: '#fdf7f5',
         textAlign: 'center',
         py: 2.2,
@@ -390,7 +390,7 @@ variant="body2"   >
         <Box
       sx={{
         width: 210,
-        height: 70,
+        height: 60,
         py: 2.2,
       paddingLeft:'16px',
         backgroundColor: '#f8f7fa',
